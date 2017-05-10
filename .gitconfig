@@ -7,3 +7,9 @@
 	default = simple
 [color]
 	ui = auto
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[alias]
+	d = difftool
