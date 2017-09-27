@@ -2,7 +2,7 @@
 	name = Jack Valmadre
 	email = jack.valmadre@gmail.com
 [push]
-	default = simple
+	default = current
 [core]
 	editor = vim
 [color]
