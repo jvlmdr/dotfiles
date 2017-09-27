@@ -1,3 +1,6 @@
+" https://github.com/tpope/vim-pathogen
+execute pathogen#infect()
+
 set nocompatible " vim not vi
 
 syntax enable
@@ -11,6 +14,8 @@ set t_Co=16
 "source ~/.vim/plugin/matchit.vim
 
 "set backspace=indent,eol,start
+
+let g:tex_flavor = 'latex'
 
 "filetype off
 "set rtp+=/Users/jack/src/vim-go
@@ -33,24 +38,23 @@ endif
 " softtabstop -- the width of an inserted tab
 "   (should probably match tabstop when expandtab is false)
 " shiftwidth -- the shift of operators >> and <<
-
-au BufNewFile,BufRead *Makefile* set noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
 au BufNewFile,BufRead *.go   set noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
 au BufNewFile,BufRead *.json set noexpandtab tabstop=2 softtabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.py   set   expandtab tabstop=4 softtabstop=4 shiftwidth=4
 au BufNewFile,BufRead *.m    set   expandtab tabstop=2 softtabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.tex  set   expandtab tabstop=2 softtabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.sh   set   expandtab tabstop=4 softtabstop=4 shiftwidth=4
+au BufNewFile,BufRead *.hs   set expandtab   tabstop=4 softtabstop=4 shiftwidth=4
 
 au BufNewFile,BufRead *.md,*.markdown set expandtab tabstop=4 softtabstop=4 shiftwidth=4
-
+au BufNewFile,BufRead *Makefile* set noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
 au BufNewFile,BufRead *.html,*.htm set expandtab tabstop=2 softtabstop=2 shiftwidth=2
-au BufNewFile,BufRead *.c,*.cc,*.cpp,*.h,*.hh,*.hpp set expandtab tabstop=2 softtabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.c,*.cc,*.cpp,*.h,*.hh,*.hpp set expandtab tabstop=4 softtabstop=4 shiftwidth=4
 
 set nojoinspaces
 
 au BufNewFile,BufRead SConstruct,SConscript set filetype=python
-au BufNewFile,BufRead *.tex set filetype=latex
+"au BufNewFile,BufRead *.tex set filetype=latex
 au BufNewFile,BufRead *.plt,*.gnuplot setf gnuplot
 
 au BufNewFile,BufRead *.c,*.cc,*.cpp,*.h,*.hh,*.hpp set cindent

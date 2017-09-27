@@ -1,15 +1,15 @@
 [user]
 	name = Jack Valmadre
 	email = jack.valmadre@gmail.com
-[core]
-	editor = vim
 [push]
 	default = simple
+[core]
+	editor = vim
 [color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
 	ui = auto
-[diff]
-	tool = vimdiff
 [difftool]
 	prompt = false
-[alias]
-	d = difftool
