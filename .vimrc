@@ -34,12 +34,15 @@ endif
 "   (should probably match tabstop when expandtab is false)
 " shiftwidth -- the shift of operators >> and <<
 
+au BufNewFile,BufRead *Makefile* set noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
 au BufNewFile,BufRead *.go   set noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
 au BufNewFile,BufRead *.json set noexpandtab tabstop=2 softtabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.py   set   expandtab tabstop=4 softtabstop=4 shiftwidth=4
 au BufNewFile,BufRead *.m    set   expandtab tabstop=2 softtabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.tex  set   expandtab tabstop=2 softtabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.sh   set   expandtab tabstop=4 softtabstop=4 shiftwidth=4
+
+au BufNewFile,BufRead *.md,*.markdown set expandtab tabstop=4 softtabstop=4 shiftwidth=4
 
 au BufNewFile,BufRead *.html,*.htm set expandtab tabstop=2 softtabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.c,*.cc,*.cpp,*.h,*.hh,*.hpp set expandtab tabstop=2 softtabstop=2 shiftwidth=2
