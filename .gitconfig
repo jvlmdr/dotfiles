@@ -1,17 +1,24 @@
 [user]
 	name = Jack Valmadre
 	email = jack.valmadre@gmail.com
+
 [push]
 	default = current
+
 [core]
 	editor = vim
+
 [color]
 	branch = auto
 	diff = auto
 	interactive = auto
 	status = auto
 	ui = auto
+
 [diff]
 	tool = vimdiff
+
 [difftool]
 	prompt = false
+[init]
+	defaultBranch = main
