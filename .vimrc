@@ -1,15 +1,26 @@
-" https://github.com/tpope/vim-pathogen
-execute pathogen#infect()
+set history=50
+set number
+set ruler
+set showcmd
+set incsearch
 
-set nocompatible " vim not vi
+" if has('mouse')
+"   set mouse=a
+" endif
+
+" " https://github.com/tpope/vim-pathogen
+" execute pathogen#infect()
+
+" set nocompatible " vim not vi
 
 syntax enable
 set background=dark
-colorscheme solarized
-" https://stackoverflow.com/questions/5560658/ubuntu-vim-and-the-solarized-color-palette
-set t_Co=16
-"let g:solarized_termcolors=16
-"set t_Co=256
+
+" colorscheme solarized
+" " https://stackoverflow.com/questions/5560658/ubuntu-vim-and-the-solarized-color-palette
+" set t_Co=16
+" "let g:solarized_termcolors=16
+" "set t_Co=256
 
 "source ~/.vim/plugin/matchit.vim
 
@@ -22,16 +33,6 @@ let g:tex_flavor = 'latex'
 "" Disable indent because Matlab indentation is broken with keyword "end".
 ""filetype plugin indent on
 "filetype plugin on
-
-set history=50
-set number
-set ruler
-set showcmd
-set incsearch
-
-if has('mouse')
-  set mouse=a
-endif
 
 " expandtab -- insert spaces when tab is inserted
 " tabstop -- the width of a tab character
@@ -53,33 +54,33 @@ au BufNewFile,BufRead *.c,*.cc,*.cpp,*.h,*.hh,*.hpp set expandtab tabstop=4 soft
 
 set nojoinspaces
 
-au BufNewFile,BufRead SConstruct,SConscript set filetype=python
-"au BufNewFile,BufRead *.tex set filetype=latex
-au BufNewFile,BufRead *.plt,*.gnuplot setf gnuplot
+" au BufNewFile,BufRead SConstruct,SConscript set filetype=python
+" "au BufNewFile,BufRead *.tex set filetype=latex
+" au BufNewFile,BufRead *.plt,*.gnuplot setf gnuplot
+" 
+" au BufNewFile,BufRead *.c,*.cc,*.cpp,*.h,*.hh,*.hpp set cindent
+" au BufNewFile,BufRead *.m  set autoindent
+" au BufNewFile,BufRead *.py set autoindent
+" au BufNewFile,BufRead *.sh set autoindent
+" 
+" au BufNewFile,BufRead *.c,*.cc,*.cpp,*.h,*.hh,*.hpp set textwidth=80
+" au BufNewFile,BufRead *.m   set textwidth=80
+" au BufNewFile,BufRead *.py  set textwidth=80
+" au BufNewFile,BufRead *.tex set textwidth=0
+" 
+" au BufNewFile,BufRead *.tex set linebreak
+" au BufNewFile,BufRead *.tex set wrap
+" au BufNewFile,BufRead *.tex set spell
+" au BufNewFile,BufRead *.tex set spelllang=en_au,en_gb,en_us
+" au BufNewFile,BufRead *.tex syn spell toplevel
+" "au BufNewFile,BufRead *.tex map j gj
+" "au BufNewFile,BufRead *.tex map k gk
+" "au BufNewFile,BufRead *.tex map $ g$
+" "au BufNewFile,BufRead *.tex map ^ g^
+" "au BufNewFile,BufRead *.tex map 0 g0
+" "let g:tex_indent_brace=0
 
-au BufNewFile,BufRead *.c,*.cc,*.cpp,*.h,*.hh,*.hpp set cindent
-au BufNewFile,BufRead *.m  set autoindent
-au BufNewFile,BufRead *.py set autoindent
-au BufNewFile,BufRead *.sh set autoindent
-
-au BufNewFile,BufRead *.c,*.cc,*.cpp,*.h,*.hh,*.hpp set textwidth=80
-au BufNewFile,BufRead *.m   set textwidth=80
-au BufNewFile,BufRead *.py  set textwidth=80
-au BufNewFile,BufRead *.tex set textwidth=0
-
-au BufNewFile,BufRead *.tex set linebreak
-au BufNewFile,BufRead *.tex set wrap
-au BufNewFile,BufRead *.tex set spell
-au BufNewFile,BufRead *.tex set spelllang=en_au,en_gb,en_us
-au BufNewFile,BufRead *.tex syn spell toplevel
-"au BufNewFile,BufRead *.tex map j gj
-"au BufNewFile,BufRead *.tex map k gk
-"au BufNewFile,BufRead *.tex map $ g$
-"au BufNewFile,BufRead *.tex map ^ g^
-"au BufNewFile,BufRead *.tex map 0 g0
-"let g:tex_indent_brace=0
-
-" Enable local .vimrc files.
-set exrc
-" For safety (see https://andrew.stwrt.ca/posts/project-specific-vimrc/)
-set secure
+" " Enable local .vimrc files.
+" set exrc
+" " For safety (see https://andrew.stwrt.ca/posts/project-specific-vimrc/)
+" set secure
