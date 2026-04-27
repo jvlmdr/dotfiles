@@ -2,8 +2,14 @@
 	name = Jack Valmadre
 	email = jack.valmadre@gmail.com
 
+[init]
+	defaultBranch = main
+
 [push]
 	default = current
+
+[pull]
+	rebase = false
 
 [core]
 	editor = vim
@@ -20,5 +26,3 @@
 
 [difftool]
 	prompt = false
-[init]
-	defaultBranch = main
