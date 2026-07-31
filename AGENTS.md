@@ -33,8 +33,15 @@
     This keeps diffs readable: editing a sentence touches one line instead of reflowing the whole paragraph.
     It also simplifies editing, since a sentence can be moved or deleted with line-wise operations.
 
+# Workflow
+
 ## Git
 
 -   Avoid force-pushing for routine work; push follow-up commits instead.
     Assume PRs are squash-merged, so intermediate commits never land on main; keeping them costs nothing and lets reviewers see what changed since their last pass.
     Force-push only when a rebase actually requires it.
+
+## Tools
+
+-   Offer to install a tool when it would make the task easier, rather than silently working around its absence.
+    Otherwise a missing tool becomes a convoluted workaround that the user never had the chance to avoid.
