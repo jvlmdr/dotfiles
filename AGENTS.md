@@ -4,6 +4,13 @@
 
 -   Prefer a functional style to in-place modification except in performance-sensitive areas.
 
+## Abstractions
+
+-   Prefer a boundary for which the field already has a language, grammar or calculus.
+    Its interface can then be understood by anyone fluent in the domain, without recourse to the implementation.
+-   Prefer a boundary that permits natural testing.
+    A component that is awkward to test usually indicates that the boundary is in the wrong place.
+
 ## Comments
 
 -   Comments should be timeless: describe what is true of the code, not a blow-by-blow account of how it came to be that way, nor a description that only makes sense in the context of the patch or conversation that produced it.
