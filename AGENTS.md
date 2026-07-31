@@ -37,9 +37,12 @@
 
 ## Git
 
--   Avoid force-pushing for routine work; push follow-up commits instead.
-    Assume PRs are squash-merged, so intermediate commits never land on main; keeping them costs nothing and lets reviewers see what changed since their last pass.
-    Force-push only when a rebase actually requires it.
+-   Bring upstream changes into a branch by rebasing, not by merging them in.
+    Merging mixes other people's commits into the branch, so its history stops reading as only the change under review.
+-   Do not force-push for the sake of a tidy history; push follow-up commits instead.
+    Within a thread of work the intermediate history is useful: a reviewer can see what changed since their last pass.
+    Assume PRs are squash-merged, so those commits never land on main and there is nothing to tidy.
+    Force-pushing is acceptable where a rebase requires it.
 
 ## Tools
 
