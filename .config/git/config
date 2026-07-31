@@ -10,6 +10,7 @@
 
 [pull]
 	rebase = false
+	ff = only
 
 [core]
 	editor = vim
