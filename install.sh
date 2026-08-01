@@ -22,7 +22,8 @@ link() {
     fi
 }
 
-# A config file at a legacy location takes precedence over the linked one.
+# A config file at a legacy location still takes effect; how it combines with
+# the linked one differs per program.
 stale() {
     if [ -e "$HOME/$1" ] || [ -L "$HOME/$1" ]; then
         echo "stale    $HOME/$1 exists; $2" >&2
@@ -35,8 +36,10 @@ link .screenrc              .screenrc
 link .config/git/config     .config/git/config
 link .config/tmux/tmux.conf .config/tmux/tmux.conf
 link ipython_config.py      .ipython/profile_default/ipython_config.py
+link AGENTS.md              .claude/CLAUDE.md
+link AGENTS.md              .codex/AGENTS.md
 
-stale .tmux.conf 'tmux reads it instead of .config/tmux/tmux.conf'
-stale .gitconfig 'its values override .config/git/config'
+stale .tmux.conf 'tmux loads it too, so it applies where .config/tmux/tmux.conf is silent'
+stale .gitconfig 'git reads it and ignores .config/git/config entirely'
 
 exit $status
