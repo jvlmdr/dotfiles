@@ -10,14 +10,14 @@ status=0
 
 link() {
     src=$dotfiles/$1 dst=$HOME/$2
-    if [ "$(readlink -f "$dst" 2>/dev/null)" = "$(readlink -f "$src")" ]; then
+    if [ "$dst" -ef "$src" ]; then
         echo "ok       $dst"
     elif [ -e "$dst" ] || [ -L "$dst" ]; then
         echo "conflict $dst exists and is not a link to $src" >&2
         status=1
     else
         mkdir -p "$(dirname "$dst")"
-        ln -sr "$src" "$dst"
+        ln -s "$src" "$dst"
         echo "linked   $dst -> $src"
     fi
 }
