@@ -14,7 +14,13 @@ set incsearch
 " set nocompatible " vim not vi
 
 syntax enable
-set background=dark
+
+" Detect 'background' by asking the terminal for its colour (OSC 11).
+" Vim only enables this query for xterm-like values of TERM, so under
+" tmux-256color or screen-256color it otherwise assumes a light background.
+if empty(&t_RB)
+  let &t_RB = "\<Esc>]11;?\<Esc>\\"
+endif
 
 " colorscheme solarized
 " " https://stackoverflow.com/questions/5560658/ubuntu-vim-and-the-solarized-color-palette
