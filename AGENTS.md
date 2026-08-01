@@ -18,7 +18,9 @@
 
 ## Python
 
--   Never use `__post_init__` in Python (except where it's already in use).
+-   Avoid `__post_init__` in Python, except where it is already in use.
+    It derives fields by mutating the instance rather than computing them up front; on a frozen dataclass it cannot even assign to them directly.
+-   Do not add `from __future__` imports that the project's Python version does not require.
 
 ## Writing
 
