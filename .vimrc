@@ -13,6 +13,13 @@ set incsearch
 
 " set nocompatible " vim not vi
 
+" Automatic regexp engine selection. This is the documented default, but
+" Apple's /usr/bin/vim ships with re=1, whose backtracking engine
+" near-hangs on TypeScript syntax regexes.
+" https://stackoverflow.com/questions/69145357/vim-almost-hangs-with-100-line-typescript-file
+if exists('&regexpengine')
+  set regexpengine=0
+endif
 syntax enable
 
 " Detect 'background' by asking the terminal for its colour (OSC 11).
@@ -33,6 +40,7 @@ endif
 "set backspace=indent,eol,start
 
 let g:tex_flavor = 'latex'
+let g:tex_comment_nospell=1
 
 "filetype off
 "set rtp+=/Users/jack/src/vim-go
@@ -45,18 +53,25 @@ let g:tex_flavor = 'latex'
 " softtabstop -- the width of an inserted tab
 "   (should probably match tabstop when expandtab is false)
 " shiftwidth -- the shift of operators >> and <<
+
+set expandtab tabstop=4 softtabstop=4 shiftwidth=4  " Defaults.
+
 au BufNewFile,BufRead *.go   set noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
 au BufNewFile,BufRead *.json set noexpandtab tabstop=2 softtabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.py   set   expandtab tabstop=4 softtabstop=4 shiftwidth=4
 au BufNewFile,BufRead *.m    set   expandtab tabstop=2 softtabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.tex  set   expandtab tabstop=2 softtabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.sh   set   expandtab tabstop=4 softtabstop=4 shiftwidth=4
-au BufNewFile,BufRead *.hs   set expandtab   tabstop=4 softtabstop=4 shiftwidth=4
+au BufNewFile,BufRead *.hs   set   expandtab tabstop=4 softtabstop=4 shiftwidth=4
 
 au BufNewFile,BufRead *.md,*.markdown set expandtab tabstop=4 softtabstop=4 shiftwidth=4
 au BufNewFile,BufRead *Makefile* set noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
 au BufNewFile,BufRead *.html,*.htm set expandtab tabstop=2 softtabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.c,*.cc,*.cpp,*.h,*.hh,*.hpp set expandtab tabstop=4 softtabstop=4 shiftwidth=4
+
+" SWI-Prolog. Must be 'set filetype=' rather than setf: vim's own detection
+" runs first and may pick perl for *.pl, which setf would not override.
+au BufNewFile,BufRead *.pl,*.plt set filetype=prolog
 
 set nojoinspaces
 
