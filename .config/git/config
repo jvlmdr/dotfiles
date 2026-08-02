@@ -32,7 +32,6 @@
 	tool = vimdiff
 
 [mergetool]
-	prompt = false
 	keepBackup = false
 
 [filter "lfs"]
