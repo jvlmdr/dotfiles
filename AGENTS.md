@@ -20,6 +20,8 @@
 
 -   Avoid `__post_init__` in Python, except where it is already in use.
     It derives fields by mutating the instance rather than computing them up front; on a frozen dataclass it cannot even assign to them directly.
+-   Prefer the modern form of a construct where the project's Python version supports it, such as PEP 695 type parameters, PEP 698 `@override`, or `itertools.batched`.
+    Follow the older form where the codebase uses it consistently.
 -   Do not add `from __future__` imports that the project's Python version does not require.
 
 ## Writing
