@@ -11,10 +11,12 @@
 -   Prefer a boundary that permits natural testing.
     A component that is awkward to test usually indicates that the boundary is in the wrong place.
 
-## Comments
+## Documentation
 
 -   Comments should be timeless: describe what is true of the code, not a blow-by-blow account of how it came to be that way, nor a description that only makes sense in the context of the patch or conversation that produced it.
 -   Do not add comments that provide no more value than the code itself.
+-   Prefer documentation that says how something fits into the structure around it, rather than describing what it implements.
+    The body is already there to be read; the role it plays in the whole is not.
 
 ## Python
 
