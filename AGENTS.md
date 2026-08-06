@@ -53,6 +53,11 @@
     Assume PRs are squash-merged, so those commits never land on main and there is nothing to tidy.
     Force-pushing is acceptable where a rebase requires it.
 
+## Pull requests
+
+-   Include only what a reviewer needs in order to review the change.
+    A statement that would hold for any PR, such as having run the formatter or the type checker being clean, says nothing about this one and adds length the reader must get past.
+
 ## Tools
 
 -   Offer to install a tool when it would make the task easier, rather than silently working around its absence.
