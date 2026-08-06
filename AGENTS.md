@@ -39,6 +39,11 @@
 
 # Workflow
 
+## Reuse
+
+-   Look for code in the project related to the task before writing any.
+    A parallel implementation of something that already exists leaves two definitions to keep in step.
+
 ## Git
 
 -   Bring upstream changes into a branch by rebasing, not by merging them in.
