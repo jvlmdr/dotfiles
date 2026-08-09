@@ -11,6 +11,11 @@
 -   Prefer a boundary that permits natural testing.
     A component that is awkward to test usually indicates that the boundary is in the wrong place.
 
+## Tests
+
+-   Exercise stable behaviour through the public interface; avoid reaching into private members.
+    A test bound to internals fails when the implementation changes, so it obstructs refactoring rather than protecting behaviour.
+
 ## Documentation
 
 -   Comments should be timeless: describe what is true of the code, not a blow-by-blow account of how it came to be that way, nor a description that only makes sense in the context of the patch or conversation that produced it.
