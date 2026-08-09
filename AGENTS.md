@@ -46,6 +46,7 @@
     Otherwise the reader must carry an unmotivated definition until the justification arrives.
 -   Avoid abbreviations that are unclear or ambiguous to a reader coming in cold.
     The test is whether someone without the surrounding context can expand it in only one way, not whether it is obvious to the author.
+-   Prefer American spelling in identifiers, as in `color` and `optimize`, unless the codebase consistently uses another.
 
 ## Markdown
 
