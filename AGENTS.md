@@ -18,10 +18,19 @@
 
 ## Documentation
 
--   Comments should be timeless: describe what is true of the code, not a blow-by-blow account of how it came to be that way, nor a description that only makes sense in the context of the patch or conversation that produced it.
--   Do not add comments that provide no more value than the code itself.
--   Do not document code by describing its implementation.
-    Explain what it does, the implementation details that bear on that, and the part it plays in the codebase as a whole, for someone using the code rather than reading it.
+-   Documentation should be timeless: describe what is true of the code, not a blow-by-blow account of how it came to be that way, nor a description that only makes sense in the context of the patch or conversation that produced it.
+-   Use the established language of the domain, including mathematical notation, when it makes the contract clearer.
+-   Keep documentation consistent with behaviour and interfaces.
+
+### Comments
+
+-   Do not add comments that merely restate the code.
+
+### Docstrings
+
+-   Describe a component for someone using it rather than reading it: as relevant, what it does, why it exists, how to use it, and how it fits into the codebase.
+-   Do not merely restate its declaration or narrate its implementation.
+    Include implementation details when they affect the contract or guide its use.
 
 ## Python
 
@@ -50,6 +59,8 @@
 
 -   Look for code in the project related to the task before writing any.
     A parallel implementation of something that already exists leaves two definitions to keep in step.
+-   When new or changed code serves a similar purpose to existing code, determine why both should exist and how their responsibilities differ.
+    If the distinction is not convincing, raise it with the user rather than treating the design as settled.
 
 ## Git
 
