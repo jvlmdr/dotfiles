@@ -40,6 +40,12 @@
     Follow the older form where the codebase uses it consistently.
 -   Do not add `from __future__` imports that the project's Python version does not require.
 
+## Formatting
+
+-   Treat an automatic formatter's output as a constraint rather than the final word: when it produces awkward line breaks, rewrite the expression into an equivalent form whose formatted output reads naturally.
+-   A local name may be renamed when the new name remains clear, but do not introduce aliases or change imports solely to influence automatic formatting.
+    When an externally defined name causes awkward formatting, suggest changing it at its source rather than hiding it behind a local alias.
+
 ## Writing
 
 -   Introduce concepts and names in a context where their motivation is already clear.
