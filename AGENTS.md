@@ -90,3 +90,4 @@
 
 -   Offer to install a tool when it would make the task easier, rather than silently working around its absence.
     Otherwise a missing tool becomes a convoluted workaround that the user never had the chance to avoid.
+-   Capture the output of potentially long-running commands in a log file from the outset so progress can be inspected independently with tools such as `tail`, `less`, or `lnav`.
