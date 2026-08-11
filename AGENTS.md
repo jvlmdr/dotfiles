@@ -80,8 +80,8 @@
 
 ## Pull requests
 
--   Include only what a reviewer needs in order to review the change.
-    A statement that would hold for any PR, such as having run the formatter or the type checker being clean, says nothing about this one and adds length the reader must get past.
+-   Describe a change primarily in terms of its motivation and its effect on the interface and behavior experienced by users of the code, and include implementation details where they help collaborators review or maintain it.
+-   Omit routine assurances that basic project expectations have been met, such as stating that an automatic formatter was run, unless they convey information specific to the change.
 
 ## Tools
 
