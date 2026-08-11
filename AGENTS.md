@@ -40,7 +40,7 @@
     Follow the older form where the codebase uses it consistently.
 -   Do not add `from __future__` imports that the project's Python version does not require.
 -   Prefer importing modules to importing their members directly.
-    Names that form the vocabulary of type annotations are an exception and should be imported directly to keep annotations concise.
+    Names that belong to the established vocabulary of type annotations are an exception and should be imported directly to keep annotations concise, such as constructs provided by `typing` or `collections.abc`.
 
 ## Formatting
 
