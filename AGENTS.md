@@ -48,6 +48,7 @@
 
 ## Writing
 
+-   Do not guess, infer, or extrapolate when writing prose; confirm every factual statement with evidence.
 -   Introduce concepts and names in a context where their motivation is already clear.
     Otherwise the reader must carry an unmotivated definition until the justification arrives.
 -   Avoid abbreviations that are unclear or ambiguous to a reader coming in cold.
