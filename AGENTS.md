@@ -13,14 +13,14 @@
 
 ## Tests
 
--   Exercise stable behaviour through the public interface; avoid reaching into private members.
-    A test bound to internals fails when the implementation changes, so it obstructs refactoring rather than protecting behaviour.
+-   Exercise stable behavior through the public interface; avoid reaching into private members.
+    A test bound to internals fails when the implementation changes, so it obstructs refactoring rather than protecting behavior.
 
 ## Documentation
 
 -   Documentation should be timeless: describe what is true of the code, not a blow-by-blow account of how it came to be that way, nor a description that only makes sense in the context of the patch or conversation that produced it.
 -   Use the established language of the domain, including mathematical notation, when it makes the contract clearer.
--   Keep documentation consistent with behaviour and interfaces.
+-   Keep documentation consistent with behavior and interfaces.
 
 ### Comments
 
@@ -50,16 +50,18 @@
 
 ## Writing
 
--   Do not guess, infer, or extrapolate when writing prose; confirm every factual statement with evidence.
+-   Do not present guesses, assumptions, or inferences as facts; confirm factual claims against available evidence.
 -   Introduce concepts and names in a context where their motivation is already clear.
     Otherwise the reader must carry an unmotivated definition until the justification arrives.
 -   Avoid abbreviations that are unclear or ambiguous to a reader coming in cold.
     The test is whether someone without the surrounding context can expand it in only one way, not whether it is obvious to the author.
 -   Prefer American spelling in identifiers, as in `color` and `optimize`, unless the codebase consistently uses another.
 
-## Markdown
+## Prose files
 
--   Do not line-wrap text; use one sentence per line.
+-   For prose files that are or may be kept under version control or compared with line-oriented tools, put each sentence on its own source line when a newline is equivalent to a space and a blank line separates paragraphs.
+    This convention applies to formats such as Markdown and LaTeX.
+    It does not apply to text entered directly into interfaces such as GitHub pull request descriptions or to source code governed by a formatter or line-length limit.
     This keeps diffs readable: editing a sentence touches one line instead of reflowing the whole paragraph.
     It also simplifies editing, since a sentence can be moved or deleted with line-wise operations.
 
