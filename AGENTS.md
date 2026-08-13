@@ -64,9 +64,11 @@
 
 ## Prose files
 
--   For prose files that are or may be kept under version control or compared with line-oriented tools, put each sentence on its own source line when a newline is equivalent to a space and a blank line separates paragraphs.
-    This convention applies to formats such as Markdown and LaTeX.
-    It does not apply to text entered directly into interfaces such as GitHub pull request descriptions or to source code governed by a formatter or line-length limit.
+-   For prose whose source form is maintained or reviewed with line-oriented tools, put each sentence on its own source line when the renderer treats a single source newline as interword whitespace.
+    This convention applies to artifacts such as Markdown documentation and LaTeX manuscripts.
+    When the renderer displays a softbreak as a visible line break, keep each paragraph on one source line; do not hard-wrap it or put each sentence on a separate line.
+    GitHub renders softbreaks this way in issues, pull requests, and discussions, including when the text is prepared in an intermediate Markdown file.
+    This convention does not apply to source code governed by a formatter or line-length limit.
     This keeps diffs readable: editing a sentence touches one line instead of reflowing the whole paragraph.
     It also simplifies editing, since a sentence can be moved or deleted with line-wise operations.
 
