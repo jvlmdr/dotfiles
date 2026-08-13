@@ -11,6 +11,11 @@
 -   Prefer a boundary that permits natural testing.
     A component that is awkward to test usually indicates that the boundary is in the wrong place.
 
+## Code organization
+
+-   If decorative comment dividers such as `####`, `====`, `----`, `****`, or `////` seem necessary to separate conceptual sections of a source file, consider whether the file's scope is too broad or its abstraction boundaries need revision.
+    Avoid introducing such dividers where they are absent; where they are established, follow the surrounding style unless restructuring removes the need for them.
+
 ## Tests
 
 -   Exercise stable behavior through the public interface; avoid reaching into private members.
