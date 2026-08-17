@@ -1,5 +1,10 @@
 > Everything should be made as simple as possible, but not simpler.
 
+> The price of reliability is the pursuit of the utmost simplicity.
+
+> Any intelligent fool can make things bigger, more complex, and more violent.
+> It takes a touch of genius … to move in the opposite direction.
+
 # Style
 
 ## State
@@ -62,6 +67,7 @@
     Otherwise the reader must carry an unmotivated definition until the justification arrives.
 -   Avoid abbreviations that are unclear or ambiguous to a reader coming in cold.
     The test is whether someone without the surrounding context can expand it in only one way, not whether it is obvious to the author.
+-   Avoid em dashes unless they express the intended structure or emphasis more clearly than other punctuation.
 -   Prefer American spelling in identifiers, as in `color` and `optimize`, unless the codebase consistently uses another.
 
 ## Prose files
