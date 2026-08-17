@@ -51,6 +51,7 @@
 -   Prefer the modern form of a construct where the project's Python version supports it, such as PEP 695 type parameters, PEP 698 `@override`, or `itertools.batched`.
     Follow the older form where the codebase uses it consistently.
 -   Do not add `from __future__` imports that the project's Python version does not require.
+-   Avoid quoted type annotations unless necessary.
 -   Prefer importing modules to importing their members directly.
     Names that belong to the established vocabulary of type annotations are an exception and should be imported directly to keep annotations concise, such as constructs provided by `typing` or `collections.abc`.
 
