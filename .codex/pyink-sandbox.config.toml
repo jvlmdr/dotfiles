@@ -1,0 +1,5 @@
+developer_instructions = """
+Pyink may hang after completing a multi-file invocation in Codex's Linux sandbox.
+When running Pyink inside Codex's Linux sandbox, run it separately for each Python file and wrap each invocation in `timeout --foreground 30s`.
+Do not apply this workaround outside Codex's Linux sandbox.
+"""
