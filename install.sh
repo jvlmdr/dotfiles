@@ -36,8 +36,8 @@ link .screenrc              .screenrc
 link .config/git/config     .config/git/config
 link .config/tmux/tmux.conf .config/tmux/tmux.conf
 link ipython_config.py      .ipython/profile_default/ipython_config.py
-link AGENTS.md              .claude/CLAUDE.md
-link AGENTS.md              .codex/AGENTS.md
+link .claude/CLAUDE.md      .claude/CLAUDE.md
+link .codex/AGENTS.md       .codex/AGENTS.md
 link .codex/pyink-sandbox.config.toml .codex/pyink-sandbox.config.toml
 
 stale .tmux.conf 'tmux loads it too, so it applies where .config/tmux/tmux.conf is silent'
