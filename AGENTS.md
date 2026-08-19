@@ -52,6 +52,8 @@
     Follow the older form where the codebase uses it consistently.
 -   Do not add `from __future__` imports that the project's Python version does not require.
 -   Avoid quoted type annotations unless necessary.
+-   Avoid `typing.cast` and type-checker suppressions when the type can be modeled or narrowed accurately instead.
+    They bypass static verification; reserve them for boundaries where an invariant is known but cannot be expressed to the type checker, and keep their scope local.
 -   Prefer importing modules to importing their members directly.
     Names that belong to the established vocabulary of type annotations are an exception and should be imported directly to keep annotations concise, such as constructs provided by `typing` or `collections.abc`.
 
