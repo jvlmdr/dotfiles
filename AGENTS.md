@@ -49,10 +49,18 @@ Simplicity is a means to an understandable and reliable system, not a synonym fo
 
 -   Prefer boundaries expressed in the domain’s established vocabulary, notation, and rules of composition.
     A practitioner fluent in the domain should be able to understand the interface without knowing its implementation.
+-   Design and evaluate code from the perspective of the person using it.
+    Start with the smallest example that demonstrates the intended use, and use it to judge whether the interface makes the essential behavior clear.
 -   Reduce dependencies between components; make those that remain explicit and easy to understand.
 -   Where performance matters, let dominant operations and access patterns shape the abstraction’s interface and data layout.
 -   Prefer a boundary that permits natural testing.
     A component that is awkward to test usually indicates that the boundary is in the wrong place.
+
+## Algorithms
+
+-   Implement established programming and mathematical algorithms so they are recognizable to a reader familiar with them.
+    Preserve their conventional structure, terminology, notation, and steps unless a concrete constraint requires otherwise.
+    Separate incidental machinery that would obscure the algorithm.
 
 ## Code organization
 
