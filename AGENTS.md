@@ -1,12 +1,16 @@
-> Everything should be made as simple as possible, but not simpler.
-> — attributed to Albert Einstein
+# Design ethos
 
 > The price of reliability is the pursuit of the utmost simplicity.
-> — Tony Hoare, “The Emperor’s Old Clothes” (1980 Turing Award lecture)
+> — C. A. R. Hoare, “The Emperor’s Old Clothes” (1980 Turing Award lecture)
 
-> Any intelligent fool can make things bigger, more complex, and more violent.
-> It takes a touch of genius … to move in the opposite direction.
-> — E. F. Schumacher, “Small Is Beautiful” (1973)
+> Simplicity is a choice.
+> — Rich Hickey, “Simple Made Easy” (2011)
+
+> The computer revolution is a revolution in the way we think and in the way we express what we think.
+> — Harold Abelson and Gerald Jay Sussman with Julie Sussman, preface to the first edition of *Structure and Interpretation of Computer Programs*
+
+Use code and abstractions to express and sharpen an understanding of the problem.
+Keep concerns distinct rather than intertwined; simplicity is a means to an understandable and reliable system, not a synonym for ease, familiarity, brevity, or fewer parts.
 
 # Style
 
@@ -33,7 +37,7 @@
 
 ## Documentation
 
--   Documentation should be timeless: describe what is true of the code, not a blow-by-blow account of how it came to be that way, nor a description that only makes sense in the context of the patch or conversation that produced it.
+-   Documentation should describe the current design and durable rationale, not the chronology of the patch or conversation that produced it.
 -   Use the established language of the domain, including mathematical notation, when it makes the contract clearer.
 -   Keep documentation consistent with behavior and interfaces.
 
@@ -78,13 +82,9 @@
 
 ## Prose files
 
--   For prose whose source form is maintained or reviewed with line-oriented tools, put each sentence on its own source line when the renderer treats a single source newline as interword whitespace.
-    This convention applies to artifacts such as Markdown documentation and LaTeX manuscripts.
-    When the renderer displays a softbreak as a visible line break, keep each paragraph on one source line; do not hard-wrap it or put each sentence on a separate line.
-    GitHub renders softbreaks this way in issues, pull requests, and discussions, including when the text is prepared in an intermediate Markdown file.
-    This convention does not apply to source code governed by a formatter or line-length limit.
-    This keeps diffs readable: editing a sentence touches one line instead of reflowing the whole paragraph.
-    It also simplifies editing, since a sentence can be moved or deleted with line-wise operations.
+-   For prose maintained or reviewed with line-oriented tools, use one sentence per source line when a newline renders as whitespace, as in Markdown documentation and LaTeX; use one paragraph per line when it renders visibly, as in GitHub issues, pull requests, discussions, and Markdown prepared for them.
+    This does not apply to formatter- or line-length-controlled source code.
+    These conventions keep diffs and line-wise edits local without changing rendered text.
 
 # Workflow
 
@@ -115,4 +115,4 @@
 
 -   Offer to install a tool when it would make the task easier, rather than silently working around its absence.
     Otherwise a missing tool becomes a convoluted workaround that the user never had the chance to avoid.
--   Capture the output of potentially long-running commands in a log file from the outset so progress can be inspected independently with tools such as `tail`, `less`, or `lnav`.
+-   Capture potentially long-running command output in a log from the outset so progress can be inspected independently.
