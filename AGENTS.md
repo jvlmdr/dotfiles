@@ -1,9 +1,12 @@
 > Everything should be made as simple as possible, but not simpler.
+> — attributed to Albert Einstein
 
 > The price of reliability is the pursuit of the utmost simplicity.
+> — Tony Hoare, “The Emperor’s Old Clothes” (1980 Turing Award lecture)
 
 > Any intelligent fool can make things bigger, more complex, and more violent.
 > It takes a touch of genius … to move in the opposite direction.
+> — E. F. Schumacher, “Small Is Beautiful” (1973)
 
 # Style
 
