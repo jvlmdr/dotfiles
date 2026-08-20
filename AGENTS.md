@@ -3,14 +3,41 @@
 > The price of reliability is the pursuit of the utmost simplicity.
 > — C. A. R. Hoare, “The Emperor’s Old Clothes” (1980 Turing Award lecture)
 
-> Simplicity is a choice.
+> We can only hope to make reliable those things we can understand.
 > — Rich Hickey, “Simple Made Easy” (2011)
 
+> Fools ignore complexity.
+> Pragmatists suffer it.
+> Some can avoid it.
+> Geniuses remove it.
+> — Alan J. Perlis, “Epigrams on Programming” (1982)
+
+> For a program to retain its quality it is mandatory that each modification is firmly grounded in the theory of it.
+> — Peter Naur, “Programming as Theory Building” (1985)
+
 > The computer revolution is a revolution in the way we think and in the way we express what we think.
-> — Harold Abelson and Gerald Jay Sussman with Julie Sussman, preface to the first edition of *Structure and Interpretation of Computer Programs*
+> — *Structure and Interpretation of Computer Programs* by Harold Abelson and Gerald Jay Sussman with Julie Sussman
+
+> As a result of all the above reasons it is our belief that the single biggest remaining cause of complexity in most contemporary large systems is [mutable] state, and the more we can do to limit and manage state, the better.
+> — Ben Moseley and Peter Marks, “Out of the Tar Pit” (2006)
+
+> The benefit provided by a module is its functionality.
+> The cost of a module (in terms of system complexity) is its interface.
+> — John Ousterhout, *A Philosophy of Software Design* (2018)
+
+> The ideal abstraction is as simple as possible, revealing everything the users need, while shielding them from implementation complexity.
+> — Conal Elliott, “Denotational Design with Type Class Morphisms” (2009)
+
+> …premature optimization is the root of all evil.
+> Yet we should not pass up our opportunities in that critical 3%.
+> — Donald E. Knuth, “Structured Programming with go to Statements” (1974)
+
+> I once heard a master programmer praised with the phrase, “He adds function by deleting code.”
+> — Jon Bentley, “The Most Beautiful Code I Never Wrote” (2007)
 
 Use code and abstractions to express and sharpen an understanding of the problem.
-Keep concerns distinct rather than intertwined; simplicity is a means to an understandable and reliable system, not a synonym for ease, familiarity, brevity, or fewer parts.
+Keep concerns distinct rather than intertwined.
+Simplicity is a means to an understandable and reliable system, not a synonym for ease, familiarity, brevity, or fewer parts.
 
 # Style
 
@@ -20,8 +47,10 @@ Keep concerns distinct rather than intertwined; simplicity is a means to an unde
 
 ## Abstractions
 
--   Prefer a boundary for which the field already has a language, grammar or calculus.
-    Its interface can then be understood by anyone fluent in the domain, without recourse to the implementation.
+-   Prefer boundaries expressed in the domain’s established vocabulary, notation, and rules of composition.
+    A practitioner fluent in the domain should be able to understand the interface without knowing its implementation.
+-   Reduce dependencies between components; make those that remain explicit and easy to understand.
+-   Where performance matters, let dominant operations and access patterns shape the abstraction’s interface and data layout.
 -   Prefer a boundary that permits natural testing.
     A component that is awkward to test usually indicates that the boundary is in the wrong place.
 
