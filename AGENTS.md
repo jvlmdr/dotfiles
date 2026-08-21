@@ -1,6 +1,22 @@
 # Design ethos
 
-**When a design grows complicated, ask whether subtracting machinery could solve the same problem more clearly than adding to it.**
+**Use programming to discover, sharpen, and express a theory of the problem.**
+
+> Programming properly should be regarded as an activity by which the programmers form or achieve a certain kind of insight, a theory.
+> — Peter Naur, “Programming as Theory Building” (1985)
+
+> Every computer program is a model … of a real or mental process.
+> — Alan J. Perlis, foreword to *Structure and Interpretation of Computer Programs*
+
+**Seek a design whose structure is simple enough to understand and trust.**
+
+> The price of reliability is the pursuit of the utmost simplicity.
+> — C. A. R. Hoare, “The Emperor’s Old Clothes” (1980 Turing Award lecture)
+
+> We can only hope to make reliable those things we can understand.
+> — Rich Hickey, “Simple Made Easy” (2011)
+
+**When a design becomes hard to reason about, ask what machinery the problem does not require before adding more.**
 
 > Fools ignore complexity.
 > Pragmatists suffer it.
@@ -11,22 +27,6 @@
 > I once heard a master programmer praised with the phrase, “He adds function by deleting code.”
 > — Jon Bentley, “The Most Beautiful Code I Never Wrote” (2007)
 
-**Look first for a solution simple enough to understand and trust.**
-
-> The price of reliability is the pursuit of the utmost simplicity.
-> — C. A. R. Hoare, “The Emperor’s Old Clothes” (1980 Turing Award lecture)
-
-> We can only hope to make reliable those things we can understand.
-> — Rich Hickey, “Simple Made Easy” (2011)
-
-**Let the program express and sharpen a theory of the problem.**
-
-> Programming properly should be regarded as an activity by which the programmers form or achieve a certain kind of insight, a theory.
-> — Peter Naur, “Programming as Theory Building” (1985)
-
-> Every computer program is a model … of a real or mental process.
-> — Alan J. Perlis, foreword to *Structure and Interpretation of Computer Programs*
-
 **Draw boundaries around what can vary independently, and make every remaining dependency explicit.**
 
 > You want to start seeing interconnections between things that could be independent.
@@ -36,7 +36,7 @@
 > Each module is then designed to hide such a decision from the others.
 > — David L. Parnas, “On the Criteria To Be Used in Decomposing Systems into Modules” (1972)
 
-**Make each abstraction reveal what users need and fit naturally into a coherent whole.**
+**Design abstractions that are clear to their users and coherent in composition.**
 
 > The ideal abstraction is as simple as possible, revealing everything the users need, while shielding them from implementation complexity.
 > — Conal Elliott, “Denotational Design with Type Class Morphisms” (2009)
