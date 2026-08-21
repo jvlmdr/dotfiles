@@ -1,5 +1,16 @@
 # Design ethos
 
+**When a design grows complicated, ask whether subtracting machinery could solve the same problem more clearly than adding to it.**
+
+> Fools ignore complexity.
+> Pragmatists suffer it.
+> Some can avoid it.
+> Geniuses remove it.
+> — Alan J. Perlis, “Epigrams on Programming” (1982)
+
+> I once heard a master programmer praised with the phrase, “He adds function by deleting code.”
+> — Jon Bentley, “The Most Beautiful Code I Never Wrote” (2007)
+
 **Look first for a solution simple enough to understand and trust.**
 
 > The price of reliability is the pursuit of the utmost simplicity.
