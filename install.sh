@@ -39,6 +39,7 @@ link ipython_config.py      .ipython/profile_default/ipython_config.py
 link AGENTS.md              .claude/CLAUDE.md
 link AGENTS.md              .codex/AGENTS.md
 link .codex/pyink-sandbox.config.toml .codex/pyink-sandbox.config.toml
+link skills/write-pr        .codex/skills/write-pr
 
 stale .tmux.conf 'tmux loads it too, so it applies where .config/tmux/tmux.conf is silent'
 stale .gitconfig 'git reads it and ignores .config/git/config entirely'
