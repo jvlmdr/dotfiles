@@ -1,43 +1,45 @@
 # Design ethos
 
+**Look first for a solution simple enough to understand and trust.**
+
 > The price of reliability is the pursuit of the utmost simplicity.
 > — C. A. R. Hoare, “The Emperor’s Old Clothes” (1980 Turing Award lecture)
 
 > We can only hope to make reliable those things we can understand.
 > — Rich Hickey, “Simple Made Easy” (2011)
 
-> Fools ignore complexity.
-> Pragmatists suffer it.
-> Some can avoid it.
-> Geniuses remove it.
-> — Alan J. Perlis, “Epigrams on Programming” (1982)
+**Let the program express and sharpen a theory of the problem.**
 
-> For a program to retain its quality it is mandatory that each modification is firmly grounded in the theory of it.
+> Programming properly should be regarded as an activity by which the programmers form or achieve a certain kind of insight, a theory.
 > — Peter Naur, “Programming as Theory Building” (1985)
 
-> The computer revolution is a revolution in the way we think and in the way we express what we think.
-> — *Structure and Interpretation of Computer Programs* by Harold Abelson and Gerald Jay Sussman with Julie Sussman
+> Every computer program is a model … of a real or mental process.
+> — Alan J. Perlis, foreword to *Structure and Interpretation of Computer Programs*
 
-> As a result of all the above reasons it is our belief that the single biggest remaining cause of complexity in most contemporary large systems is [mutable] state, and the more we can do to limit and manage state, the better.
-> — Ben Moseley and Peter Marks, “Out of the Tar Pit” (2006)
+**Draw boundaries around what can vary independently, and make every remaining dependency explicit.**
 
-> The benefit provided by a module is its functionality.
-> The cost of a module (in terms of system complexity) is its interface.
-> — John Ousterhout, *A Philosophy of Software Design* (2018)
+> You want to start seeing interconnections between things that could be independent.
+> — Rich Hickey, “Simple Made Easy” (2011)
+
+> One begins with … design decisions which are likely to change.
+> Each module is then designed to hide such a decision from the others.
+> — David L. Parnas, “On the Criteria To Be Used in Decomposing Systems into Modules” (1972)
+
+**Make each abstraction reveal what users need and fit naturally into a coherent whole.**
 
 > The ideal abstraction is as simple as possible, revealing everything the users need, while shielding them from implementation complexity.
 > — Conal Elliott, “Denotational Design with Type Class Morphisms” (2009)
 
-> …premature optimization is the root of all evil.
-> Yet we should not pass up our opportunities in that critical 3%.
+> The programmer must seek both perfection of part and adequacy of collection.
+> — Alan J. Perlis, foreword to *Structure and Interpretation of Computer Programs*
+
+**Let concrete demands, not anticipation, justify generalization and optimization.**
+
+> … beginning with readable and correct, but possibly inefficient programs that are systematically transformed if necessary into efficient and correct, but possibly less readable code.
 > — Donald E. Knuth, “Structured Programming with go to Statements” (1974)
 
-> I once heard a master programmer praised with the phrase, “He adds function by deleting code.”
-> — Jon Bentley, “The Most Beautiful Code I Never Wrote” (2007)
-
-Use code and abstractions to express and sharpen an understanding of the problem.
-Keep concerns distinct rather than intertwined.
-Simplicity is a means to an understandable and reliable system, not a synonym for ease, familiarity, brevity, or fewer parts.
+> In programming, everything we do is a special case of something more general—and often we know it too quickly.
+> — Alan J. Perlis, “Epigrams on Programming” (1982)
 
 # Style
 
@@ -51,6 +53,8 @@ Simplicity is a means to an understandable and reliable system, not a synonym fo
     A practitioner fluent in the domain should be able to understand the interface without knowing its implementation.
 -   Design and evaluate code from the perspective of the person using it.
     Start with the smallest example that demonstrates the intended use, and use it to judge whether the interface makes the essential behavior clear.
+-   Prefer a function for a single operation with no state or identity.
+    Use a class when instances represent a domain concept, maintain an invariant, or participate in an established protocol.
 -   Reduce dependencies between components; make those that remain explicit and easy to understand.
 -   Where performance matters, let dominant operations and access patterns shape the abstraction’s interface and data layout.
 -   Prefer a boundary that permits natural testing.
