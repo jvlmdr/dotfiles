@@ -116,6 +116,7 @@ Simplicity is a means to an understandable and reliable system, not a synonym fo
     The test is whether someone without the surrounding context can expand it in only one way, not whether it is obvious to the author.
 -   Avoid em dashes unless they express the intended structure or emphasis more clearly than other punctuation.
 -   Prefer American spelling in identifiers, as in `color` and `optimize`, unless the codebase consistently uses another.
+-   Refer to other contributors by their GitHub handles.
 
 ## Prose files
 
