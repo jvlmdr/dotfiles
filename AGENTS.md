@@ -1,42 +1,75 @@
-# Design ethos
+# Ethos
 
-**Programming is the work of understanding.**
+Programming is the construction and preservation of understanding.
+Complexity is dangerous chiefly because it erodes that understanding.
+Good design separates, subtracts, and makes correctness visible.
+Complexity is justified only when it buys enough to repay its permanent cognitive cost.
 
-> Programming properly should be regarded as an activity by which the programmers form or achieve a certain kind of insight, a theory.
+> “Fools ignore complexity. Pragmatists suffer it. Some can avoid it. Geniuses remove it.”
+>
+> — Alan J. Perlis, “Epigrams on Programming” (1982)
+
+## Build understanding, not merely software
+
+Programming is not principally the production of instructions for a machine.
+It is the formation of a theory: an understanding of what the system means, why it works, and how it may safely change.
+Code is the durable expression of that understanding, not a substitute for it.
+
+> “Programming properly should be regarded as an activity by which the programmers form or achieve a certain kind of insight, a theory.”
+>
 > — Peter Naur, “Programming as Theory Building” (1985)
 
-**Trust rests on simple structure.**
+## Keep separate that which can be understood separately
 
-> The price of reliability is the pursuit of the utmost simplicity.
-> — C. A. R. Hoare, “The Emperor’s Old Clothes” (1980 Turing Award lecture)
+Simplicity is not fewness, familiarity, or brevity.
+It is the absence of unnecessary entanglement.
+Prefer several independent things over fewer things that must always be understood together.
 
-**Simplify the design, not the problem.**
-
-> Fools ignore complexity.
-> Pragmatists suffer it.
-> Some can avoid it.
-> Geniuses remove it.
-> — Alan J. Perlis, “Epigrams on Programming” (1982)
-
-> I once heard a master programmer praised with the phrase, “He adds function by deleting code.”
-> — Jon Bentley, “The Most Beautiful Code I Never Wrote” (2007)
-
-**The domain reveals what belongs together.**
-
-> So every intertwining is adding this burden, and the burden is kind of combinatorial as to the number of things that we can consider.
-> So, fundamentally, this complexity—and by complexity I mean this braiding together of things—is going to limit our ability to understand our systems.
+> “I’d rather have more things hanging nice, straight down, not twisted together, than just a couple of things tied in a knot.”
+>
 > — Rich Hickey, “Simple Made Easy” (2011)
 
-> Choose modules that tell the story of the system and contain a cohesive set of concepts.
-> — Eric Evans, *Domain-Driven Design Reference* (2015)
+The purpose of an abstraction is not merely to hide detail.
+It is to establish a boundary across which the details no longer have to be considered together.
 
-**Let concrete need justify complexity.**
+## Prefer subtraction to accumulation
 
-> … beginning with readable and correct, but possibly inefficient programs that are systematically transformed if necessary into efficient and correct, but possibly less readable code.
+Every additional abstraction, mechanism, state transition, configuration option, and special case creates a continuing obligation to understand and maintain it.
+Before adding machinery, look for a representation or formulation in which the machinery is unnecessary.
+
+> “I once heard a master programmer praised with the phrase, ‘He adds function by deleting code.’”
+>
+> — Jon Bentley, “The Most Beautiful Code I Never Wrote” (2007)
+
+The strongest solution may eliminate the problem, narrow it, make the invalid state unrepresentable, or expose that two supposedly different cases are really one.
+
+## Make correctness self-evident
+
+A program is not well designed merely because it can be made to work.
+Its structure should expose why it works.
+Important invariants should be local and expressible; failures should be conspicuous; and deficiencies should be difficult to conceal beneath layers of incidental machinery.
+
+> “There are two ways of constructing a software design: One way is to make it so simple that there are obviously no deficiencies and the other way is to make it so complicated that there are no obvious deficiencies.”
+>
+> — C. A. R. Hoare, “The Emperor’s Old Clothes” (1981)
+
+Reliability does not come from piling safeguards onto an incomprehensible design.
+It begins by making the design comprehensible enough to inspect, test, and change with confidence.
+
+## Add complexity only when it earns its place
+
+Simplicity is not a prohibition against difficult algorithms, optimization, indirection, or abstraction.
+Sometimes these are the right tools.
+But complexity is never free: it imposes a permanent tax on reasoning, debugging, testing, and future change.
+
+Add it only in response to a real need, where its benefit is concrete enough to justify that tax.
+
+> “We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%.”
+>
 > — Donald E. Knuth, “Structured Programming with go to Statements” (1974)
 
-> In programming, everything we do is a special case of something more general—and often we know it too quickly.
-> — Alan J. Perlis, “Epigrams on Programming” (1982)
+The question is not whether a technique is sophisticated. It is whether the sophistication is carrying its weight.
+
 
 # Style
 
@@ -124,6 +157,7 @@
 -   For prose maintained or reviewed with line-oriented tools, use one sentence per source line when a newline renders as whitespace, as in Markdown documentation and LaTeX; use one paragraph per line when it renders visibly, as in GitHub issues, pull requests, discussions, and Markdown prepared for them.
     This does not apply to formatter- or line-length-controlled source code.
     These conventions keep diffs and line-wise edits local without changing rendered text.
+
 
 # Workflow
 
