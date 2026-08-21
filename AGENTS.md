@@ -1,22 +1,16 @@
 # Design ethos
 
-**Use programming to discover, sharpen, and express a theory of the problem.**
+**Programming is the work of understanding.**
 
 > Programming properly should be regarded as an activity by which the programmers form or achieve a certain kind of insight, a theory.
 > — Peter Naur, “Programming as Theory Building” (1985)
 
-> Every computer program is a model … of a real or mental process.
-> — Alan J. Perlis, foreword to *Structure and Interpretation of Computer Programs*
-
-**Seek a design whose structure is simple enough to understand and trust.**
+**Trust rests on simple structure.**
 
 > The price of reliability is the pursuit of the utmost simplicity.
 > — C. A. R. Hoare, “The Emperor’s Old Clothes” (1980 Turing Award lecture)
 
-> We can only hope to make reliable those things we can understand.
-> — Rich Hickey, “Simple Made Easy” (2011)
-
-**When a design becomes hard to reason about, ask what machinery the problem does not require before adding more.**
+**Simplify the design, not the problem.**
 
 > Fools ignore complexity.
 > Pragmatists suffer it.
@@ -27,24 +21,16 @@
 > I once heard a master programmer praised with the phrase, “He adds function by deleting code.”
 > — Jon Bentley, “The Most Beautiful Code I Never Wrote” (2007)
 
-**Draw boundaries around what can vary independently, and make every remaining dependency explicit.**
+**The domain reveals what belongs together.**
 
-> You want to start seeing interconnections between things that could be independent.
+> So every intertwining is adding this burden, and the burden is kind of combinatorial as to the number of things that we can consider.
+> So, fundamentally, this complexity—and by complexity I mean this braiding together of things—is going to limit our ability to understand our systems.
 > — Rich Hickey, “Simple Made Easy” (2011)
 
-> One begins with … design decisions which are likely to change.
-> Each module is then designed to hide such a decision from the others.
-> — David L. Parnas, “On the Criteria To Be Used in Decomposing Systems into Modules” (1972)
+> Choose modules that tell the story of the system and contain a cohesive set of concepts.
+> — Eric Evans, *Domain-Driven Design Reference* (2015)
 
-**Design abstractions that are clear to their users and coherent in composition.**
-
-> The ideal abstraction is as simple as possible, revealing everything the users need, while shielding them from implementation complexity.
-> — Conal Elliott, “Denotational Design with Type Class Morphisms” (2009)
-
-> The programmer must seek both perfection of part and adequacy of collection.
-> — Alan J. Perlis, foreword to *Structure and Interpretation of Computer Programs*
-
-**Let concrete demands, not anticipation, justify generalization and optimization.**
+**Let concrete need justify complexity.**
 
 > … beginning with readable and correct, but possibly inefficient programs that are systematically transformed if necessary into efficient and correct, but possibly less readable code.
 > — Donald E. Knuth, “Structured Programming with go to Statements” (1974)
