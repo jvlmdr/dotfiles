@@ -109,7 +109,6 @@ The question is not whether a technique is sophisticated. It is whether the soph
 ## Documentation
 
 -   Documentation should describe the current design and durable rationale, not the chronology of the patch or conversation that produced it.
--   When several components form a coherent whole, document how they fit together at the narrowest enclosing boundary that represents that whole, rather than requiring users to reconstruct the design from the components' individual documentation.
 -   Use the established language of the domain, including mathematical notation, when it makes the contract clearer.
 -   Keep documentation consistent with behavior and interfaces.
 
@@ -120,6 +119,7 @@ The question is not whether a technique is sophisticated. It is whether the soph
 ### Docstrings
 
 -   Describe a component for someone using it rather than reading it: as relevant, what it does, why it exists, how to use it, and how it fits into the codebase.
+-   Where a class or module exposes a non-trivial public interface, use its docstring to orient a new user with an overview of the important public operations and how they are intended to be used.
 -   Do not merely restate its declaration or narrate its implementation.
     Include implementation details when they affect the contract or guide its use.
 
