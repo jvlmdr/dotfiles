@@ -109,6 +109,7 @@ The question is not whether a technique is sophisticated. It is whether the soph
 ## Documentation
 
 -   Documentation should describe the current design and durable rationale, not the chronology of the patch or conversation that produced it.
+-   When several components form a coherent whole, document how they fit together at the narrowest enclosing boundary that represents that whole, rather than requiring users to reconstruct the design from the components' individual documentation.
 -   Use the established language of the domain, including mathematical notation, when it makes the contract clearer.
 -   Keep documentation consistent with behavior and interfaces.
 

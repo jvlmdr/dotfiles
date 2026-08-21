@@ -63,6 +63,8 @@ This readiness review is intentionally broader than defect discovery, but every 
   Apply repository guidance to type annotations, including casts and type-checker suppressions, and consider natural re-expression when formatter output obscures the code without contorting it.
 - **Tests and explanation:** Check whether tests protect consequential behavior through stable public interfaces, and flag redundant, low-value, weak, implementation-coupled, or overly prescriptive tests as well as material gaps.
   Check that affected documentation, docstrings, and comments are accurate, current rather than chronological, useful to users, and consistent with behavior and applicable repository instructions.
+  For changed components, judge docstrings for sufficiency from a user's perspective, not merely accuracy: where relevant, they should make the component's purpose, contract, use, and place in the system evident, including consequential choices, constraints, or operational requirements.
+  Flag missing or materially incomplete docstrings, including those that merely restate a declaration or narrate the implementation.
 - **Diff and fresh-reader questions:** Check the mergeable diff for unrelated churn, accidental artifacts, or a scope that should be reduced or split.
   Identify consequential surprises and the obvious questions a user, maintainer, or reviewer would ask, then determine whether the code, documentation, or existing pull request answers them.
   When a pull request or changelog entry exists, verify its material claims against the implementation rather than line-editing its prose.
