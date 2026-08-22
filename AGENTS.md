@@ -144,6 +144,8 @@ The question is not whether a technique is sophisticated. It is whether the soph
     They bypass static verification; reserve them for boundaries where an invariant is known but cannot be expressed to the type checker, and keep their scope local.
 -   Prefer importing modules to importing their members directly.
     Names that belong to the established vocabulary of type annotations are an exception and should be imported directly to keep annotations concise, such as constructs provided by `typing` or `collections.abc`.
+-   Evaluate Python names as they will normally appear at use sites, including any qualification supplied by imports.
+    Judge a name together with the context readers normally see, rather than in isolation or against a fully qualified path they do not use.
 
 ## Formatting
 
