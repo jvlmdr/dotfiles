@@ -190,7 +190,8 @@ The question is not whether a technique is sophisticated, but whether its benefi
 ### Docstrings
 
 -   Describe a component for someone using it rather than reading it: as relevant, what it does, why it exists, how to use it, and how it fits into the codebase.
--   Where a class or module exposes a non-trivial public interface, use its docstring to orient a new user with an overview of the important public operations and how they are intended to be used.
+-   When several related components must be understood together, provide one clear overview of how they fit together and are intended to be used.
+    Put it at the natural entry point, usually the module docstring or the docstring of the principal class, rather than scattering it across individual members.
 -   Do not merely restate its declaration or narrate its implementation.
     Include implementation details when they affect the contract or guide its use.
 
