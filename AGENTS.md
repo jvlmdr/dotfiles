@@ -42,8 +42,9 @@ The wrong abstraction costs more than the duplication it replaces.
 >
 > — Rich Hickey, *Simple Made Easy* (2011)
 
-What can be understood apart need not be carried together.
-The value of a boundary lies in what no longer needs to cross it.
+What can be understood apart need not be carried together; what must be understood together should not be scattered.
+The value of a boundary lies in what no longer crosses it.
+A boundary that merely moves coupled parts apart sacrifices locality of behaviour; it creates distance, not simplicity.
 
 ## Obvious by construction
 
@@ -120,7 +121,7 @@ The question is not whether a technique is sophisticated, but whether its benefi
 - Sandi Metz, *The Wrong Abstraction* (2016)
 - John Ousterhout, *A Philosophy of Software Design* (2018)
 - Alexis King, *Parse, Don’t Validate* (2019)
-- Carson Gross, *The Grug Brained Developer* (2022)
+- Carson Gross, *Locality of Behaviour* (2020) and *The Grug Brained Developer* (2022)
 
 ### Productive tensions
 
