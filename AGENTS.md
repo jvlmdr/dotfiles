@@ -64,14 +64,14 @@ Reliability rests on a design that can explain itself.
 Every abstraction, dependency, state variable, configuration option, and special case is one more fact future readers must carry.
 A part that cannot justify itself is not neutral: it enlarges the theory future readers must reconstruct.
 
-## Subtract before adding
+## Prefer to remove rather than add
 
 > “I once heard a master programmer praised with the phrase, ‘He adds function by deleting code.’”
 >
 > — Jon Bentley, *The Most Beautiful Code I Never Wrote* (2007)
 
 The strongest change is often a reformulation: machinery disappears, invalid states become unrepresentable, and two cases become one.
-Subtraction is measured not in lines or parts, but in assumptions, exceptions, and couplings.
+Removal matters most when it eliminates assumptions, exceptions, and couplings, not merely lines or parts.
 
 ## Narrow the promise
 
