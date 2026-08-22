@@ -51,6 +51,10 @@ Do not make the caller restate context already available in the conversation or 
 
 ## Write the title and description
 
+- Write the shortest description that gives users and reviewers the context they need.
+  Treat the guidance below as conditional, not as a completeness checklist.
+- Keep rendered paragraphs short and focused on one idea.
+  Prefer bullets for distinct points and a small code example when either is easier to scan than continuous prose.
 - Choose a concise title that names the changed behavior or capability rather than the work process that produced it.
 - Begin a substantial description with one or two unheaded paragraphs that introduce the problem or feature, summarize the solution, and explain its effect for users of the code.
   A small, cohesive change may need nothing more.
