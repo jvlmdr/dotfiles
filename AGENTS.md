@@ -2,73 +2,131 @@
 
 Programming is the construction and preservation of understanding.
 Complexity is dangerous chiefly because it erodes that understanding.
-Good design separates, subtracts, and makes correctness visible.
-Complexity is justified only when it buys enough to repay its permanent cognitive cost.
+Good design keeps things apart, leaves things out, and lets correctness show; whatever complexity remains has earned its place.
 
 > “Fools ignore complexity. Pragmatists suffer it. Some can avoid it. Geniuses remove it.”
 >
-> — Alan J. Perlis, “Epigrams on Programming” (1982)
+> — Alan J. Perlis, *Epigrams on Programming* (1982)
 
-## Build understanding, not merely software
+## Programming is theory building
 
-Programming is not principally the production of instructions for a machine.
-It is the formation of a theory: an understanding of what the system means, why it works, and how it may safely change.
-Code is the durable expression of that understanding, not a substitute for it.
-
-> “Programming properly should be regarded as an activity by which the programmers form or achieve a certain kind of insight, a theory.”
+> “Programming properly should be regarded as an activity by which the programmers form or achieve a certain kind of insight, a theory, of the matters at hand.”
 >
-> — Peter Naur, “Programming as Theory Building” (1985)
+> — Peter Naur, *Programming as Theory Building* (1985)
 
-## Keep separate that which can be understood separately
+Programming builds a theory of the system: what it means, why it works, and how it may safely change.
+The theory lives in those who build and maintain the system; code is its durable trace, not the theory itself.
 
-Simplicity is not fewness, familiarity, or brevity.
-It is the absence of unnecessary entanglement.
-Prefer several independent things over fewer things that must always be understood together.
+## The problem is not given
+
+> “It is a familiar and significant saying that a problem well put is half-solved.”
+>
+> — John Dewey, *Logic: The Theory of Inquiry* (1938)
+
+Real problems arrive without their proper names, boundaries, or invariants.
+The first solution is a better statement of the problem.
+The right formulation often reveals familiar structure; novelty is a conclusion, not a premise.
+
+## Generalize late
+
+> “In programming, everything we do is a special case of something more general—and often we know it too quickly.”
+>
+> — Alan J. Perlis, *Epigrams on Programming* (1982)
+
+Speculation built into a design is complexity before its theory: abstraction ahead of the concrete cases that would reveal its proper shape, and generality for needs that may never arrive.
+The wrong abstraction costs more than the duplication it replaces.
+
+## Simple means untangled
 
 > “I’d rather have more things hanging nice, straight down, not twisted together, than just a couple of things tied in a knot.”
 >
-> — Rich Hickey, “Simple Made Easy” (2011)
+> — Rich Hickey, *Simple Made Easy* (2011)
 
-The purpose of an abstraction is not merely to hide detail.
-It is to establish a boundary across which the details no longer have to be considered together.
+What can be understood apart need not be carried together.
+The value of a boundary lies in what no longer needs to cross it.
 
-## Prefer subtraction to accumulation
-
-Every additional abstraction, mechanism, state transition, configuration option, and special case creates a continuing obligation to understand and maintain it.
-Before adding machinery, look for a representation or formulation in which the machinery is unnecessary.
-
-> “I once heard a master programmer praised with the phrase, ‘He adds function by deleting code.’”
->
-> — Jon Bentley, “The Most Beautiful Code I Never Wrote” (2007)
-
-The strongest solution may eliminate the problem, narrow it, make the invalid state unrepresentable, or expose that two supposedly different cases are really one.
-
-## Make correctness self-evident
-
-A program is not well designed merely because it can be made to work.
-Its structure should expose why it works.
-Important invariants should be local and expressible; failures should be conspicuous; and deficiencies should be difficult to conceal beneath layers of incidental machinery.
+## Obvious by construction
 
 > “There are two ways of constructing a software design: One way is to make it so simple that there are obviously no deficiencies and the other way is to make it so complicated that there are no obvious deficiencies.”
 >
-> — C. A. R. Hoare, “The Emperor’s Old Clothes” (1981)
+> — C. A. R. Hoare, *The Emperor’s Old Clothes* (1980)
 
-Reliability does not come from piling safeguards onto an incomprehensible design.
-It begins by making the design comprehensible enough to inspect, test, and change with confidence.
+A good structure is an argument: invariants local, assumptions visible, failures conspicuous.
+Reliability rests on a design that can explain itself.
 
-## Add complexity only when it earns its place
+## Every part earns its keep
 
-Simplicity is not a prohibition against difficult algorithms, optimization, indirection, or abstraction.
-Sometimes these are the right tools.
-But complexity is never free: it imposes a permanent tax on reasoning, debugging, testing, and future change.
-
-Add it only in response to a real need, where its benefit is concrete enough to justify that tax.
-
-> “We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%.”
+> “…its occurrence in that program can only be justified by what that instruction achieves, by ‘what it does for you’.”
 >
-> — Donald E. Knuth, “Structured Programming with go to Statements” (1974)
+> — Edsger W. Dijkstra, letter to Dr. H. Bekić, EWD454 (1974)
 
-The question is not whether a technique is sophisticated. It is whether the sophistication is carrying its weight.
+Every abstraction, dependency, state variable, configuration option, and special case is one more fact future readers must carry.
+A part that cannot justify itself is not neutral: it enlarges the theory future readers must reconstruct.
+
+## Subtract before adding
+
+> “I once heard a master programmer praised with the phrase, ‘He adds function by deleting code.’”
+>
+> — Jon Bentley, *The Most Beautiful Code I Never Wrote* (2007)
+
+The strongest change is often a reformulation: machinery disappears, invalid states become unrepresentable, and two cases become one.
+Subtraction is measured not in lines or parts, but in assumptions, exceptions, and couplings.
+
+## Narrow the promise
+
+> “[T]he interface must not promise more than the implementer knows how to deliver.”
+>
+> — Butler Lampson, *Hints for Computer System Design* (1983)
+
+A narrower promise buys real simplicity: fewer cases, fewer configurations, fewer futures to honour.
+A deliberate limit is a design decision; a silent one is a defect deferred.
+
+## Complexity must pay its way
+
+> “Because ease of use is the purpose, this ratio of function to conceptual complexity is the ultimate test of system design.”
+>
+> — Fred Brooks, *The Mythical Man-Month* (1975)
+
+Sophistication can be the clearest expression of a coherent theory.
+Accretion is complexity without a theory: one mechanism per symptom, until no one can say what the model is.
+
+The question is not whether a technique is sophisticated, but whether its benefit justifies the permanent cost of understanding it.
+
+---
+
+## Sources and further reading
+
+### Kindred texts
+
+- John Dewey, *Logic: The Theory of Inquiry* (1938)
+- George Pólya, *How to Solve It* (1945)
+- Edsger W. Dijkstra, *Notes on Structured Programming* (1970), *The Humble Programmer* (Turing Award lecture, 1972), *On the Role of Scientific Thought*, EWD447 (1974), and letter to Dr. H. Bekić, EWD454 (1974)
+- David L. Parnas, *On the Criteria to Be Used in Decomposing Systems into Modules* (1972)
+- Brian Kernighan & P. J. Plauger, *The Elements of Programming Style* (1974)
+- Fred Brooks, *The Mythical Man-Month* (1975) and *No Silver Bullet: Essence and Accidents of Software Engineering* (1986)
+- Kenneth E. Iverson, *Notation as a Tool of Thought* (1979 Turing Award lecture; published 1980)
+- C. A. R. Hoare, *The Emperor’s Old Clothes* (1980 Turing Award lecture; published 1981)
+- Meir M. Lehman, *Programs, Life Cycles, and Laws of Software Evolution* (1980)
+- Alan J. Perlis, *Epigrams on Programming* (1982)
+- Butler Lampson, *Hints for Computer System Design* (1983)
+- Jerome H. Saltzer, David P. Reed & David D. Clark, *End-to-End Arguments in System Design* (1984)
+- Peter Naur, *Programming as Theory Building* (1985)
+- Thomas R. G. Green, *Cognitive Dimensions of Notations* (1989)
+- Michael Jackson, *The World and the Machine* (1995)
+- Ben Moseley & Peter Marks, *Out of the Tar Pit* (2006)
+- Jon Bentley, *The Most Beautiful Code I Never Wrote* (2007)
+- Rich Hickey, *Hammock Driven Development* (Clojure/conj, 2010) and *Simple Made Easy* (Strange Loop, 2011)
+- Dan McKinley, *Choose Boring Technology* (2015)
+- Sandi Metz, *The Wrong Abstraction* (2016)
+- John Ousterhout, *A Philosophy of Software Design* (2018)
+- Alexis King, *Parse, Don’t Validate* (2019)
+- Carson Gross, *The Grug Brained Developer* (2022)
+
+### Productive tensions
+
+- Horst Rittel & Melvin Webber, *Dilemmas in a General Theory of Planning* (1973)
+- Richard P. Gabriel, *Lisp: Good News, Bad News, How to Win Big*, especially “The Rise of ‘Worse Is Better’” (1991)
+- Brian Foote & Joseph Yoder, *Big Ball of Mud* (1997)
 
 
 # Style
@@ -81,8 +139,10 @@ The question is not whether a technique is sophisticated. It is whether the soph
 
 -   Prefer boundaries expressed in the domain’s established vocabulary, notation, and rules of composition.
     A practitioner fluent in the domain should be able to understand the interface without knowing its implementation.
--   Design and evaluate code from the perspective of the person using it.
-    Start with the smallest example that demonstrates the intended use, and use it to judge whether the interface makes the essential behavior clear.
+-   “The ideal abstraction is as simple as possible, revealing everything the users need, while shielding them from implementation complexity.”
+    — Conal Elliott, “Denotational Design with Type Class Morphisms” (2009)
+-   Design and evaluate an abstraction from the perspective of the person using it.
+    Keep in mind a minimal example that demonstrates how the interface is used.
 -   Prefer a function for a single operation with no state or identity.
     Use a class when instances represent a domain concept, maintain an invariant, or participate in an established protocol.
 -   Reduce dependencies between components; make those that remain explicit and easy to understand.
