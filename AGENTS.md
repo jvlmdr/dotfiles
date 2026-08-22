@@ -90,6 +90,15 @@ The question is not whether a technique is sophisticated. It is whether the soph
 -   Prefer a boundary that permits natural testing.
     A component that is awkward to test usually indicates that the boundary is in the wrong place.
 
+## Naming
+
+-   When naming an operation or event with a verb, identify its grammatical subject and object.
+    Make explicit which entity acts and which is acted upon unless the surrounding interface establishes those roles unambiguously.
+-   Avoid jargon and abbreviations that are unclear or ambiguous to a reader coming in cold.
+    The test is whether a reader with the expected domain knowledge can identify the intended meaning without project-specific context, not whether it is obvious to the author.
+-   Avoid nonstandard terms and nonstandard uses of established terms.
+    If either is unavoidable, explain the intended meaning clearly where users first encounter it.
+
 ## Algorithms
 
 -   Implement established programming and mathematical algorithms so they are recognizable to a reader familiar with them.
@@ -147,8 +156,6 @@ The question is not whether a technique is sophisticated. It is whether the soph
 -   Do not present guesses, assumptions, or inferences as facts; confirm factual claims against available evidence.
 -   Introduce concepts and names in a context where their motivation is already clear.
     Otherwise the reader must carry an unmotivated definition until the justification arrives.
--   Avoid abbreviations that are unclear or ambiguous to a reader coming in cold.
-    The test is whether someone without the surrounding context can expand it in only one way, not whether it is obvious to the author.
 -   Avoid em dashes unless they express the intended structure or emphasis more clearly than other punctuation.
 -   Prefer American spelling in identifiers, as in `color` and `optimize`, unless the codebase consistently uses another.
 -   Refer to other contributors by their GitHub handles.
