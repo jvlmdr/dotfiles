@@ -162,9 +162,10 @@ The question is not whether a technique is sophisticated, but whether its benefi
 
 ## Algorithms
 
+-   Present the essential logic of a computation so it can be taken in as a whole.
+    Its structure should show the principal operations and decisions, and how they relate, before the reader follows their details.
 -   Implement established programming and mathematical algorithms so they are recognizable to a reader familiar with them.
     Preserve their conventional structure, terminology, notation, and steps unless a concrete constraint requires otherwise.
-    Separate incidental machinery that would obscure the algorithm.
 
 ## Code organization
 
@@ -195,6 +196,8 @@ The question is not whether a technique is sophisticated, but whether its benefi
 
 ## Python
 
+-   Keep sibling clauses close enough that the control structure remains apparent as a whole.
+    A long clause body makes their relationship difficult to parse even when nesting is only one level deep.
 -   Avoid `__post_init__` in Python, except where it is already in use.
     It derives fields by mutating the instance rather than computing them up front; on a frozen dataclass it cannot even assign to them directly.
 -   Prefer the modern form of a construct where the project's Python version supports it, such as PEP 695 type parameters, PEP 698 `@override`, or `itertools.batched`.
