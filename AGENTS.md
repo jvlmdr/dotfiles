@@ -254,6 +254,7 @@ The question is not whether a technique is sophisticated, but whether its benefi
 
 ## Pull requests
 
+-   When working with stacked pull requests on GitHub, use the `gh stack` commands to create and manage the stack.
 -   Describe a change primarily in terms of its motivation and its effect on the interface and behavior experienced by users of the code, and include implementation details where they help collaborators review or maintain it.
 -   Prominently warn the user if a pull request removes code or documentation that version history attributes to another contributor.
     Identify the affected material and contributor when the history provides reliable attribution.
