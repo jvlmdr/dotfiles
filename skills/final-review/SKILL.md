@@ -1,6 +1,6 @@
 ---
 name: final-review
-description: Coordinate independent, read-only reviewers for a branch or code change before merge or human handoff. Use when asked for a final, pre-merge, pre-PR, pre-handoff, readiness, or fresh-eyes review; do not use for narrow review questions, ordinary implementation checks, or merely because work is complete.
+description: Coordinate a comprehensive, independent, read-only readiness review of a coherent branch or code change. Use only when explicitly invoked as `$final-review`; do not infer it from ordinary review, completion, pull request, handoff, or merge requests.
 ---
 
 # Final Review
@@ -11,8 +11,8 @@ The review is read-only and does not itself authorize fixes, commits, pushes, pu
 
 ## When to use it
 
-Use this skill after the intended change is coherent and the user asks for a final review, a fresh set of eyes, or a readiness decision before opening, handing off, or merging it.
-Do not invoke it merely because implementation is complete or because the user asks to open or create a pull request without also asking for a readiness review.
+Use this skill only when the user explicitly invokes `$final-review`.
+Do not infer it from requests to review code, verify or finish an implementation, open a pull request, prepare a handoff, or decide whether a change is ready to merge.
 The review does not become an automatic review-and-fix loop.
 
 ## Establish a stable target
