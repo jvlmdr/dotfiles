@@ -60,8 +60,7 @@ Then inspect the implementation, callers, tests, and surrounding code, and ask:
 - Could its responsibilities, state, mechanisms, or tests be substantially simpler without weakening the contract?
 
 Apply repository guidance to structure, names, implementation expression, documentation, and test quality.
-Look for concrete costs in understanding or maintenance and plausible improvements, including unnecessary or implementation-coupled tests.
-Report actionable design concerns without inventing defects or rewriting to taste.
+Look for simpler formulations, unnecessary or implementation-coupled tests, and opportunities to improve the code's readability, elegance, and visual coherence.
 
 ### Correctness and integration
 
@@ -75,28 +74,29 @@ Identify material questions that would benefit from specialist review, explainin
 ### Specialists
 
 Choose additional reviewers according to the questions the change raises, including those identified by reviewers.
-Launch evident specialists alongside the core reviewers, and add others as new material risks emerge.
-Give each a concrete question that calls for a distinct review method.
+Launch evident specialists alongside the core reviewers, and add others when questions need additional expertise or focused attention.
+Give each a concrete question, drawing on the [example specialist reviews](references/specialist-reviews.md) when useful.
+Specialists contribute domain knowledge to both correctness and design judgment; a focused pass on code presentation can also be useful.
+Choose, combine, or add specialties to suit the change; the examples are not an exhaustive list or a required roster.
 
 Use a dedicated lifecycle reviewer when the change materially affects concurrency, operation ordering, cancellation, resource ownership, or lifetime.
 Account for implicit concurrency and framework guarantees; the presence of `async` or ordinary resource use alone does not establish a need.
-Other specialties may include security, persistence and compatibility, numerical behavior, performance, or domain and ecosystem rules.
-These examples are not exhaustive; choose other specialties when the change calls for them.
-Use the [specialist review methods](references/specialist-reviews.md) as examples and adapt them to the question.
 
 Give specialists the shared brief, their question, and relevant raw evidence without other reviewers' conclusions.
-Have them inspect the complete diff far enough to understand interactions, then concentrate on the behavior relevant to their question.
+Have them inspect the complete diff far enough to understand interactions, then concentrate on the aspects of the change relevant to their question.
 Material questions affecting readiness must be resolved with evidence or reported as gaps.
 
 ## Verify and synthesize
 
 Each reviewer should return:
 
-- concrete, actionable findings introduced or materially exposed by the change, ordered by severity, with a location, triggering scenario, consequence, evidence, and fix direction when evident; and
+- concrete, actionable findings introduced or materially exposed by the change, ordered by severity, with a location, triggering scenario, consequence, evidence, and fix direction when evident;
+- worthwhile suggestions for improving the reviewed change, when there are any; and
 - the assessed scope, material limitations, and unresolved questions.
 
-Distinguish defects, actionable design problems, and unresolved questions.
-Use `P0` for a critical universal blocker, `P1` for an urgent problem, `P2` for an ordinary issue worth fixing, and `P3` for a low-impact concern still worth fixing.
+Distinguish defects and actionable design problems from aesthetic suggestions and unresolved questions.
+Aesthetic improvements need not fix a defect; explain the proposed improvement and keep subjective preferences separate from blockers.
+For findings, use `P0` for a critical universal blocker, `P1` for an urgent problem, `P2` for an ordinary issue worth fixing, and `P3` for a low-impact concern still worth fixing.
 Say when there are no findings.
 Include detailed supporting notes when they establish a finding or explain uncertainty.
 
@@ -105,7 +105,7 @@ Check material findings directly against the cited code and resolve disagreement
 Reuse existing validation and run only targeted checks needed to settle a concrete question; do not repeat broad suites when existing evidence already answers it.
 Consult authoritative sources when a judgment depends on unfamiliar or version-specific behavior, using the project's actual versions and reporting any material uncertainty.
 
-Combine duplicate findings by root cause and present one synthesized list with consistent severity.
+Combine duplicate findings by root cause and present one synthesized list with consistent severity, followed by any worthwhile suggestions.
 Finish with a concise readiness assessment identifying the reviewed target and base, blockers, and material gaps.
 For a merge-readiness decision, confirm that the live pull request head, comparison base, and mergeable diff match the reviewed inputs; update affected reviews if they differ.
 Verify that current checks, approvals, and feedback apply to the reviewed head and have been addressed as required.
@@ -117,4 +117,4 @@ A review applies to its recorded revision and working-tree scope.
 When these change, have the affected reviewers verify the changes and their interactions, including any fixes to their findings.
 Account for prior findings as closed, open, or superseded with evidence, and determine whether earlier conclusions still hold.
 Reuse prior coverage where its reasoning remains valid; repeat the full review when the changes invalidate the earlier design or coverage.
-Add specialists for new material risks and record the updated target and coverage before issuing a new verdict.
+Add specialists when changes raise new questions needing their expertise and record the updated target and coverage before issuing a new verdict.
