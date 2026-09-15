@@ -60,6 +60,11 @@ Programming is the construction and preservation of shared understanding: what t
 
 ## Code organization
 
+-   Within a scope, prefer symmetry in abstraction and proportion in detail: coherent chunks at similar levels of abstraction, each given space appropriate to its significance.
+    Supporting detail should not obscure the principal operations and decisions.
+    Consider extracting detail that can be understood independently, while keeping together what should be understood together.
+
+    *Beck's Composed Method; Single Level of Abstraction Principle (SLAP).*
 -   If decorative comment dividers such as `####`, `====`, `----`, `****`, or `////` seem necessary to separate conceptual sections of a source file, consider whether the file's scope is too broad or its abstraction boundaries need revision.
     Avoid introducing such dividers where they are absent; where they are established, follow the surrounding style unless restructuring removes the need for them.
 
