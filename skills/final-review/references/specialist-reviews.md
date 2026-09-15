@@ -11,8 +11,8 @@ Identify owners, mutation sites, execution contexts, ordering and visibility gua
 Only then judge races, stale work, leaks, double completion, reentrancy, idempotency, or timeout behavior.
 Verify framework guarantees rather than inventing interleavings the framework excludes.
 
-For externally invoked or queued work, give a compact per-operation account of admission and queueing, outer and inner deadlines, cancellation effects, retry and idempotency, and ownership after caller abandonment.
-Summarize the ownership model and the material public-operation timelines or interleavings examined in the coverage note.
+For externally invoked or queued work, trace admission, deadlines, cancellation, retries, and ownership after caller abandonment.
+Use operation timelines or interleavings when they help establish a finding or explain uncertainty.
 
 ## Security and privacy
 

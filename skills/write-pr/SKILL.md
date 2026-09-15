@@ -1,57 +1,41 @@
 ---
 name: write-pr
-description: Prepare, open, review, or revise pull requests from the current conversation, repository, and GitHub context. Use when asked to open or create a ready or GitHub draft pull request, or to preview, draft, improve, inspect, or update its title or description; do not use merely because work may later become a pull request.
+description: Write or review pull request titles and descriptions, or create and update pull requests on GitHub. Use when asked for these actions, not merely because work may later become a pull request.
 ---
 
 # Write Pull Requests
 
 Produce a self-contained pull request title and description that explain the change to users of the code first, then give reviewers and maintainers the context that matters.
-Adapt the description to the change rather than filling a fixed template.
 
-## When to use it
+## Choose the action
 
-Use this skill at the pull request boundary, after the branch contains enough of the intended change for its behavior and evidence to be described accurately.
-If it is invoked earlier, write only what the current evidence supports and keep unresolved claims outside the proposed description.
+- **Preview:** A request to draft, write, or propose a title or description returns the proposed text directly in the conversation, without creating a file or changing GitHub.
+  A request to review a description returns findings and suggested prose.
+- **Create:** A request to open or create a pull request creates a ready PR unless the user explicitly requests GitHub's draft state.
+- **Update:** A request to revise or update an existing pull request changes only the requested fields on GitHub, including its draft state when requested.
 
-Use these terms consistently:
-
-- A **preview** is proposed title and body text returned in the conversation without creating a file or changing GitHub.
-- A **ready PR** is a remote GitHub pull request that is ready for review.
-- A **GitHub draft PR** is a remote GitHub pull request created or marked with GitHub's draft state.
-
-Never call a preview a draft PR.
-Choose the action from the request:
-
-- A request to draft, write, or propose a title or description produces a preview.
-- A request to open or create a pull request creates a ready PR unless the user explicitly requests GitHub's draft state.
-- A request to open or create a draft PR, open it as draft, or mark it as draft creates or updates a GitHub draft PR.
-- To review a pull request description, report findings and suggest prose without changing GitHub unless the user also requests an update.
-- To revise or update an existing pull request, read the live pull request and change only the requested fields.
-
-If the phrase `draft PR` is ambiguous and acting on it could mutate GitHub, ask which meaning the user intends before making the remote change.
-
-## Inputs
-
-Treat the invoking agent's current conversation, workspace, and established findings as input.
-Honor explicit context supplied with the invocation before context inferred from the repository.
-
-Optional inputs include a pull request reference, base branch, intended audience, requested emphasis, and facts that are not recoverable from durable project artifacts.
-When these are omitted, inspect them when they are safely discoverable and ask only when a missing choice would materially change the result.
+Keep a preview distinct from a GitHub draft PR.
+If the request is ambiguous between a preview and a remote change, clarify before changing GitHub.
+Before applying an update, reread the live title and body, preserve unrelated intervening edits, and apply the requested revision to the current version.
 
 ## Understand the change
 
+Use the current conversation, workspace, and established findings, giving explicit context precedence over inference.
+Ask for missing context only when it cannot be recovered and would materially change the result.
+
 - Read the applicable repository instructions and pull request template.
-- Establish the actual comparison base, then inspect the diff and commit series as a whole.
+- For a new or substantially rewritten description, establish the actual comparison base and understand the diff and commit series as a whole.
+  For a narrow prose edit, investigate the claims it affects and reuse established findings.
 - Read related issues, pull requests, documentation, changelog material, and available behavioral or measurement evidence when they affect the explanation.
 - For an existing pull request, read its current title, body, and relevant discussion before proposing a revision.
 - Identify who uses the changed code or behavior and what they experience before deciding which implementation details matter.
 - Confirm factual claims against available evidence and distinguish measured results from inference.
 
-Do not make the caller restate context already available in the conversation or workspace.
+If the change is incomplete, describe only what the evidence supports and keep unresolved claims outside the proposed description.
 
 ## Write the title and description
 
-- Write the shortest description that gives users and reviewers the context they need.
+- Scale the depth to the change, giving users and reviewers a clear explanation without unnecessary detail.
   Treat the guidance below as conditional, not as a completeness checklist.
 - Keep rendered paragraphs short and focused on one idea.
   Prefer bullets for distinct points and a small code example when either is easier to scan than continuous prose.
@@ -76,15 +60,5 @@ Follow applicable repository instructions for prose layout, contributor attribut
 
 ## GitHub Markdown
 
-Assume the title and body will be rendered by GitHub as GitHub-flavored Markdown.
+Use GitHub-flavored Markdown, including lists, tables, links, and code blocks when they clarify the description.
 Keep each prose paragraph on one source line, separate paragraphs with blank lines, and do not hard-wrap prose.
-Use ordinary Markdown lists, tables, links, inline code, and fenced code blocks when they clarify the description.
-Do not rely on soft line breaks for paragraph structure or add forced line breaks for visual wrapping.
-
-## Output and remote changes
-
-For a preview, return the title and rendered-source body directly in the conversation rather than writing an intermediate file.
-Use a temporary file or standard input only as implementation machinery when a GitHub command needs it, not as the delivered preview.
-
-Update a pull request only when the user explicitly asks for the remote change.
-Immediately before updating it, reread the live title and body, preserve intervening human edits and deliberate ordering, and change only the requested fields.
