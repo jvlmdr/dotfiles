@@ -4,18 +4,14 @@ Programming is the construction and preservation of shared understanding: what t
 
 -   **Finding the right formulation is part of solving the problem.**
     A better model can reveal familiar structure, unify special cases, and make machinery unnecessary.
-
 -   **Good boundaries reduce what must be understood together.**
     What can be understood apart need not be carried together; what must be understood together should not be scattered.
-
 -   **Correctness should be visible in the structure.**
     A component's implementation and its correctness argument should develop together, guided by a clear mental model of how it works.
     Local invariants, explicit assumptions, and clear control flow make that argument easier to follow and check.
-
 -   **Abstractions should follow the structure of the problem.**
     An interface should express the concepts, operations, and laws its users reason with.
     Generality should clarify the problem at hand; speculative generality can add machinery and obscure the distinctions that matter.
-
 -   **Complexity has a lasting cost in understanding.**
     A design should make the problem's inherent complexity manageable and justify the complexity it introduces.
     The strongest simplifications eliminate unnecessary distinctions, special cases, and dependencies, not merely lines of code.
