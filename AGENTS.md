@@ -9,17 +9,16 @@ Programming is the construction and preservation of shared understanding: what t
     What can be understood apart need not be carried together; what must be understood together should not be scattered.
 
 -   **Correctness should be visible in the structure.**
-    A programmer should develop a component's implementation and correctness argument together, guided by a clear mental model of how it works.
+    A component's implementation and its correctness argument should develop together, guided by a clear mental model of how it works.
     Local invariants, explicit assumptions, and clear control flow make that argument easier to follow and check.
 
 -   **Abstractions should follow the structure of the problem.**
     An interface should express the concepts, operations, and laws its users reason with.
-    Generality should clarify the problem at hand; speculative generality can add unnecessary complexity.
+    Generality should clarify the problem at hand; speculative generality can add machinery and obscure the distinctions that matter.
 
 -   **Complexity has a lasting cost in understanding.**
-    Some complexity belongs to the problem.
-    Concepts, cases, assumptions, and their relationships all shape how easy a system is to understand.
-    The strongest simplifications eliminate unnecessary conceptual complexity, not merely lines of code.
+    A design should make the problem's inherent complexity manageable and justify the complexity it introduces.
+    The strongest simplifications eliminate unnecessary distinctions, special cases, and dependencies, not merely lines of code.
 
 
 # Style
