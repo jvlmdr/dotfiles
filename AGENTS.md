@@ -1,6 +1,6 @@
 # Ethos
 
-Programming is the construction and preservation of understanding: what the problem is, how the system solves it, and why the solution works.
+Programming is the construction and preservation of shared understanding: what the problem is, how the system solves it, and why the solution works.
 
 -   **Finding the right formulation is part of solving the problem.**
     A better model can reveal familiar structure, unify special cases, and make machinery unnecessary.
@@ -9,16 +9,17 @@ Programming is the construction and preservation of understanding: what the prob
     What can be understood apart need not be carried together; what must be understood together should not be scattered.
 
 -   **Correctness should be visible in the structure.**
-    Local invariants, explicit assumptions, and clear control flow help us follow and check the reasoning.
-    That clarity gives us firmer grounds for confidence in the system.
+    A programmer should develop a component's implementation and correctness argument together, guided by a clear mental model of how it works.
+    Local invariants, explicit assumptions, and clear control flow make that argument easier to follow and check.
 
 -   **Abstractions should follow the structure of the problem.**
     An interface should express the concepts, operations, and laws its users reason with.
     Generality should clarify the problem at hand; speculative generality can add unnecessary complexity.
 
 -   **Complexity has a lasting cost in understanding.**
+    Some complexity belongs to the problem.
     Concepts, cases, assumptions, and their relationships all shape how easy a system is to understand.
-    The strongest simplifications eliminate conceptual complexity, not merely lines of code.
+    The strongest simplifications eliminate unnecessary conceptual complexity, not merely lines of code.
 
 
 # Style
@@ -34,13 +35,12 @@ Programming is the construction and preservation of understanding: what the prob
 -   “The ideal abstraction is as simple as possible, revealing everything the users need, while shielding them from implementation complexity.”
     — Conal Elliott, “Denotational Design with Type Class Morphisms” (2009)
 -   Design and evaluate an abstraction from the perspective of the person using it.
-    Keep in mind a minimal example that demonstrates how the interface is used.
+    Keep in mind a minimal usage example and a test of the abstraction's behavior.
+    A good boundary often makes both straightforward to write.
 -   Prefer a function for a single operation with no state or identity.
     Use a class when instances represent a domain concept, maintain an invariant, or participate in an established protocol.
 -   Reduce dependencies between components; make those that remain explicit and easy to understand.
 -   Where performance matters, let dominant operations and access patterns shape the abstraction’s interface and data layout.
--   Prefer a boundary that permits natural testing.
-    A component that is awkward to test usually indicates that the boundary is in the wrong place.
 
 ## Naming
 
