@@ -25,7 +25,8 @@ Programming is the construction and preservation of shared understanding: what t
 
 ## State
 
--   Prefer a functional style to in-place modification except in performance-sensitive areas.
+-   Prefer a functional style to in-place modification.
+    Local mutation can be appropriate when it makes an algorithm clearer or materially improves performance.
 
 ## Abstractions
 
@@ -89,8 +90,8 @@ Programming is the construction and preservation of shared understanding: what t
 
 -   Keep sibling clauses close enough that the control structure remains apparent as a whole.
     A long clause body makes their relationship difficult to parse even when nesting is only one level deep.
--   Avoid `__post_init__` in Python, except where it is already in use.
-    It derives fields by mutating the instance rather than computing them up front; on a frozen dataclass it cannot even assign to them directly.
+-   Avoid `__post_init__` except where it is already in use.
+    Treat dataclasses as plain data records: compute their field values explicitly in the calling code or a construction function.
 -   Prefer the modern form of a construct where the project's Python version supports it, such as PEP 695 type parameters, PEP 698 `@override`, or `itertools.batched`.
     Follow the older form where the codebase uses it consistently.
 -   Do not add `from __future__` imports that the project's Python version does not require.
@@ -105,8 +106,8 @@ Programming is the construction and preservation of shared understanding: what t
 ## Formatting
 
 -   Treat an automatic formatter's output as a constraint rather than the final word: when it produces awkward line breaks, rewrite the expression into an equivalent form whose formatted output reads naturally.
--   A local name may be renamed when the new name remains clear, but do not introduce aliases or change imports solely to influence automatic formatting.
-    When an externally defined name causes awkward formatting, suggest changing it at its source rather than hiding it behind a local alias.
+-   A local name may be renamed when the new name remains clear, but do not introduce aliases or change imports solely to influence line wrapping.
+    When an externally defined name causes awkward line wrapping, consider suggesting a clearer or more concise name at its source.
 
 ## Writing
 
@@ -129,9 +130,10 @@ Programming is the construction and preservation of shared understanding: what t
 ## Reuse
 
 -   Look for code in the project related to the task before writing any.
-    A parallel implementation of something that already exists leaves two definitions to keep in step.
+    Keep one authoritative definition of a rule when its uses must remain consistent.
+    Weigh the cost of duplication against the coupling introduced by sharing an implementation.
 -   When new or changed code serves a similar purpose to existing code, determine why both should exist and how their responsibilities differ.
-    If the distinction is not convincing, raise it with the user rather than treating the design as settled.
+    If the distinction is not convincing, consider raising it with the user.
 
 ## Git
 
@@ -146,12 +148,11 @@ Programming is the construction and preservation of shared understanding: what t
 
 -   When working with stacked pull requests on GitHub, use the `gh stack` commands to create and manage the stack.
 -   Describe a change primarily in terms of its motivation and its effect on the interface and behavior experienced by users of the code, and include implementation details where they help collaborators review or maintain it.
--   Prominently warn the user if a pull request removes code or documentation that version history attributes to another contributor.
-    Identify the affected material and contributor when the history provides reliable attribution.
+-   Call attention to removals that discard another contributor's functionality or substantive documentation without an equivalent replacement.
+    Explain what is being lost and identify the contributor when version history provides reliable attribution.
 -   Omit routine assurances that basic project expectations have been met, such as stating that an automatic formatter was run, unless they convey information specific to the change.
 
 ## Tools
 
--   Offer to install a tool when it would make the task easier, rather than silently working around its absence.
-    Otherwise a missing tool becomes a convoluted workaround that the user never had the chance to avoid.
+-   When a missing tool would make the task easier, consider whether to raise it with the user before investing in a workaround.
 -   Capture potentially long-running command output in a log from the outset so progress can be inspected independently.
