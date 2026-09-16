@@ -32,7 +32,8 @@ Use established facts to avoid rediscovery, while leaving reviewers free to veri
 
 ## Assign independent reviews
 
-For an initial review of code or other behavior-affecting changes, use two fresh agents in the core roles below.
+For an initial review of code or other behavior-affecting changes, use two fresh agents in the core design and correctness roles below.
+Add a fresh test-auditing agent when requested or when the core reviews leave a consequential question about test quality or coverage.
 For changes limited to explanatory prose or nonbehavioral metadata, one fresh reader checking clarity and factual claims is sufficient.
 Instructions, configuration, and similar artifacts can change behavior; assess their effect when choosing coverage.
 
@@ -70,6 +71,12 @@ Check for consequential test gaps, unintended behavior, and unrelated changes in
 Use `$review-agent` for the defect-first pass when available; otherwise perform that pass directly.
 
 Identify material questions that would benefit from specialist review, explaining the question, why it matters, and the relevant paths and available evidence.
+
+### Test auditing
+
+First look at the public interfaces and record proposed test cases, without reading the implementation or existing tests.
+Then examine the existing tests and compare them with the proposed cases.
+Check that the tests follow the principles in AGENTS.md, looking for issues such as trivial or redundant tests, implementation coupling, excessive mocking or monkey-patching, disproportionate test machinery, and gaps in coverage of public behavior.
 
 ### Specialists
 
