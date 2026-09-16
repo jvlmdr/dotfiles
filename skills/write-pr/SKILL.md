@@ -38,7 +38,7 @@ If the change is incomplete, describe only what the evidence supports and keep u
 Choose a concise title that names the changed behavior or capability.
 Give a compact overview of the main use case, changed contract, and important design decisions.
 Use roughly 150–250 words for a typical substantial change; small changes can be much shorter.
-A draft over about 300 words needs another selection pass: retain extra detail only for distinct interface changes, migrations, or qualifications that would be misleading to omit.
+A draft over about 300 words needs another selection pass: retain extra detail only for distinct interface changes, migrations, essential design rationale, or qualifications that would be misleading to omit.
 
 - Begin with one or two unheaded sentences introducing the problem or capability and its effect for users of the code.
 - For a substantial change, follow the introduction with subject-specific headings and bullets for distinct behaviors or guarantees.
@@ -56,7 +56,8 @@ A draft over about 300 words needs another selection pass: retain extra detail o
   Check compatibility advice against the old and new behavior, and make clear which cases a fallback actually supports.
 
 Omit test counts, passing-check assurances, and coverage inventories, including paragraphs that restate behavior as a list of tests.
-Include evidence when it materially substantiates or qualifies a claim: for example, a measured improvement, a reproduced failure that now succeeds, or a verification limitation that affects use.
+Include evidence when it materially supports the change's main claims or exposes a limitation that affects use.
+Give necessary interface information and design rationale priority over secondary measurements.
 Report the decisive result and its conditions once, near the claim; use a table when it makes several results easier to compare.
 When testing is the purpose of the PR, explain the behavior being protected or the new testing capability.
 
@@ -64,7 +65,8 @@ Make the description understandable to a reader who did not see the originating 
 Remove conversational chronology, agent notes, and internal campaign labels unless they are necessary project context.
 Follow applicable repository instructions for prose layout, contributor attribution, and warnings about removed material.
 
-Before returning or applying the description, scan its introduction, headings, example, and bullets: can a reader identify how to use the change, where it applies, and why it is designed this way?
+Before returning or applying the description, compare it with the essential interface and design facts established from the source.
+Check that shortening has preserved prerequisites, compatibility requirements, and important rationale.
 For each supporting detail, ask what would be lost if it were removed: keep it when omission would invite likely misuse or hide an important rationale, compatibility requirement, or qualification.
 Merge related guarantees into compact points and cut repetition; a long bullet or list can be as dense as a paragraph.
 
