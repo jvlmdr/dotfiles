@@ -65,8 +65,13 @@ Programming is the construction and preservation of shared understanding: what t
 
 ## Tests
 
--   Exercise stable behavior through the public interface; avoid reaching into private members.
-    A test bound to internals fails when the implementation changes, so it obstructs refactoring rather than protecting behavior.
+-   Test behavior, not implementation.
+    Exercise functionality through public interfaces without reaching into private implementation details.
+-   Tests should be substantive.
+    Tests should collectively verify the behavior promised by the public interface.
+    While mocking can help control dependencies, avoid tests that become trivial through excessive mocking or monkey-patching.
+    Omit trivial or redundant tests.
+-   Tests and their supporting machinery should not be disproportionately complex for the behavior being verified.
 
 ## Documentation
 
@@ -134,6 +139,12 @@ Programming is the construction and preservation of shared understanding: what t
     Weigh the cost of duplication against the coupling introduced by sharing an implementation.
 -   When new or changed code serves a similar purpose to existing code, determine why both should exist and how their responsibilities differ.
     If the distinction is not convincing, consider raising it with the user.
+
+## Tests
+
+-   For substantial changes in behavior, develop the public contract and representative test cases together before implementing the change.
+    Use the intended behavior and existing coverage to identify what needs protection.
+    Keep this planning proportionate to the change's complexity and risk.
 
 ## Git
 
