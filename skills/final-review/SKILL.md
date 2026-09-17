@@ -61,6 +61,9 @@ Then inspect the implementation, callers, tests, and surrounding code, and ask:
 - Could its responsibilities, state, mechanisms, or tests be substantially simpler without weakening the contract?
 
 Apply repository guidance to structure, names, implementation expression, documentation, and test quality.
+Explicitly check for code smells, especially in the structure and the public API facing the rest of the codebase.
+Inspect representative call sites to judge whether the API makes correct use straightforward and keeps implementation knowledge within the component.
+Treat smells as prompts for investigation: explain the concrete cost to understanding, changing, or verifying the code and suggest a simpler structure when warranted.
 Look for simpler formulations, unnecessary or implementation-coupled tests, and opportunities to improve the code's readability, elegance, and visual coherence.
 
 ### Correctness and integration
