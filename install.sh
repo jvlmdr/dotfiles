@@ -39,6 +39,8 @@ link ipython_config.py      .ipython/profile_default/ipython_config.py
 link AGENTS.md              .claude/CLAUDE.md
 link AGENTS.md              .codex/AGENTS.md
 link .codex/pyink-sandbox.config.toml .codex/pyink-sandbox.config.toml
+link skills/final-review    .claude/skills/final-review
+link skills/write-pr        .claude/skills/write-pr
 link skills/final-review    .codex/skills/final-review
 link skills/write-pr        .codex/skills/write-pr
 
