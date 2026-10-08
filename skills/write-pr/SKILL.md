@@ -6,6 +6,7 @@ description: Write or review pull request titles and descriptions, or create and
 # Write Pull Requests
 
 Produce a self-contained pull request title and description that explain the change to users of the code first, then give reviewers and maintainers the context that matters.
+Apply the `prose` skill to the wording, including its checks; this skill adds what is specific to pull requests.
 
 ## Choose the action
 
