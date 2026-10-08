@@ -46,6 +46,7 @@ link skills/write-skill .claude/skills/write-skill
 link skills/extract-skill .claude/skills/extract-skill
 link skills/testing-principles .claude/skills/testing-principles
 link skills/whoever-smelt-it .claude/skills/whoever-smelt-it
+link skills/audit-tests .claude/skills/audit-tests
 link skills/final-review    .codex/skills/final-review
 link skills/write-pr        .codex/skills/write-pr
 link skills/eat-the-elephant .codex/skills/eat-the-elephant
@@ -53,6 +54,7 @@ link skills/write-skill .codex/skills/write-skill
 link skills/extract-skill .codex/skills/extract-skill
 link skills/testing-principles .codex/skills/testing-principles
 link skills/whoever-smelt-it .codex/skills/whoever-smelt-it
+link skills/audit-tests .codex/skills/audit-tests
 
 stale .tmux.conf 'tmux loads it too, so it applies where .config/tmux/tmux.conf is silent'
 stale .gitconfig 'git reads it and ignores .config/git/config entirely'

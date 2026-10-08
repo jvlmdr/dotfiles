@@ -12,6 +12,8 @@ SKILL.md deliberately does not link here, so agents running the skill do not loa
 - **Test a skill by replaying it.**
   "Can you run a skill audit? Try applying this skill in a fresh worktree before we started cleaning up and see what it produces? I feel like some of the rules might miss things that I identified. Some might have no effect but that's less serious" (on a cleanup skill drafted from one session's edits)
   "try it?", "test it" and "I mean try them out..." (on each candidate wording of a checklist item; fresh judges, blinded to the intended answers, ran it on the cases it should catch and the counterweights it should not)
+- **Stop tuning when a stubborn case stops moving.**
+  "I think we're going too hard on this" (after two replay rounds reworded a skill to flip one held-out verdict while the totals stayed inside run-to-run noise)
 - **Change one thing at a time.**
   "It sounds like we might need to refine the test skill before testing it? Although this means that we cannot untangle the 2?" (when a held-out session exercised two skills at once)
 - **Separate writing a skill from extracting one.**
