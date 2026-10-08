@@ -72,6 +72,7 @@ Programming is the construction and preservation of shared understanding: what t
     While mocking can help control dependencies, avoid tests that become trivial through excessive mocking or monkey-patching.
     Omit trivial or redundant tests.
 -   Tests and their supporting machinery should not be disproportionately complex for the behavior being verified.
+-   Avoid the named test smells: Fragile Test (matching message text or stderr), General Fixture, Erratic Test (sleeps and timing), Overspecified Software (heavy mocking) and production code that exists only for tests; the `testing-principles` skill has the full principles.
 
 ## Documentation
 
@@ -97,7 +98,7 @@ Programming is the construction and preservation of shared understanding: what t
     A long clause body makes their relationship difficult to parse even when nesting is only one level deep.
 -   Avoid `__post_init__` except where it is already in use.
     Treat dataclasses as plain data records: compute their field values explicitly in the calling code or a construction function.
--   Prefer the modern form of a construct where the project's Python version supports it, such as PEP 695 type parameters, PEP 698 `@override`, or `itertools.batched`.
+-   Prefer the modern form of a construct where the project's Python version supports it, such as PEP 695 type parameters, PEP 698 `@override`, `itertools.batched`, or `Generator[None]` for a `@contextmanager`.
     Follow the older form where the codebase uses it consistently.
 -   Do not add `from __future__` imports that the project's Python version does not require.
 -   Avoid quoted type annotations unless necessary.

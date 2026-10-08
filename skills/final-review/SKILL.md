@@ -79,7 +79,7 @@ Identify material questions that would benefit from specialist review, explainin
 
 First look at the public interfaces and record proposed test cases, without reading the implementation or existing tests.
 Then examine the existing tests and compare them with the proposed cases.
-Check that the tests follow the principles in AGENTS.md, looking for issues such as trivial or redundant tests, implementation coupling, excessive mocking or monkey-patching, disproportionate test machinery, and gaps in coverage of public behavior.
+Check that the tests follow the `testing-principles` skill, looking for issues such as trivial or redundant tests, implementation coupling, excessive mocking or monkey-patching, disproportionate test machinery, and gaps in coverage of public behavior.
 
 ### Specialists
 
