@@ -1,0 +1,15 @@
+# Sources
+
+The author's corrections behind each group of points, for maintainers.
+SKILL.md deliberately does not link here, so agents running the skill do not load it.
+
+- The point: "What are we trying to say here?"; "I find it too circuitous and indirect. What are the key points! What are we trying to convey, then write"; "Get to the heart of the matter"; "I feel like we're getting away from things that matter"; "Remove anything which is edge cases or incidental detail."
+- The reader: "Someone who comes to this page just wants to know how things work!"; "an expert in machine learning and a proficient programmer in standard jax/python but does not know the sharp edges"; "everything be crystal clear to a strong engineer without too much explanation"; "What are the most obvious questions?"; "it's not clear enough what this implies for us".
+- Placement: "Where should this live?"; "Should it be in the docstring (for reader/browser) or in the comments (for author/implementer)?"; "Is this a bit long to post?"; "Keep it strictly factual. No extraneous details."
+- Order: "Will the motivation be clear at each step?"; "Readers should not be continually asking themselves 'why? why?'"; "I think this docstring comes in a bit cold! It immediately describes the corner case"; "The evidence is important, but it drowns out the message"; "first read the tldr and check if it's clear by itself, then read the details".
+- Structure: "Make the modifications to the structure ... without writing any prose yet"; "Think about the dependencies of different sections"; "should use nested bullets? Otherwise it's a bit hard to read the top-level points"; "The table should tell the story, not prose"; "I still don't understand what this table is getting at".
+- Words and sentences: "Uploading is an ambiguous term"; "that sounds like one thread per preparation"; "Is it clear what MPS means?"; "Is this the canonical name in the literature??"; "I can't remember what C1 and B mean"; "clauses get mixed up"; "slightly difficult grammar to parse"; "Plainer :)"; "It should be technical."; "they don't want to read long walls of text, especially AI generated"; "Use single `backticks` in docstrings, I think that's the broad convention".
+- Truth: "Is this true?"; "Is this technically accurate against the technical study and the RFC"; "We must have got 0.17m from somewhere?"; "'40% slower' is unclear with 2 vs 1"; "'no use' is too absolute"; "This sounds quite worrying on a first read."
+- Revising: "Is this still accurate? If so, why change the opening line?"; "I'm not sure if we are improving things here?"; "Did we lose some rows from this table?".
+- Check: "have a fresh-eyes agent read it, see what questions they have, check their understanding"; "one for readability and succinctness, one for factual correctness, with the brevity/clarity reviewer getting the final say".
+- Names: plain language and plain-English editing traditions; Strunk & White's "omit needless words"; the inverted pyramid (most important first); Minto's pyramid principle (conclusion before supporting evidence).
