@@ -15,6 +15,6 @@ description: Principles for writing, changing and reviewing tests in any languag
 - Give each test one behavior and name it for that behavior, so that a failure says what broke (Single Concept per Test); combine steps only where their order is the behavior or the setup is an expensive end-to-end run.
 - Observe outcomes as state and exception types, in process, rather than through message text, stderr or a subprocess, unless the text itself is the contract: those break when wording or the environment changes, and can pass on an unrelated failure (the smell: Fragile Test).
 - Use fixtures for setup that is expensive or needs cleanup, and say why something is a fixture.
-  Give each collaborator its own stand-in, set up in the test, rather than one shared object configured by name for all of them, so the test shows how the code is used (the smell: General Fixture).
+  Set up each test the way callers use the code, so reading it takes no concept beyond the code itself: a test-only abstraction the reader must learn first, such as one object configured by name for every collaborator, hides that usage (the smell: General Fixture).
 - Keep a test's verdict independent of timing (the smell: Erratic Test): wait on the event itself rather than sleeping, give each wait a generous deadline that only matters when the test is failing, so a hang becomes a failure, and assert on durations only where time is the behavior under test.
 - Keep tests and their supporting machinery in proportion to the behavior being verified.
